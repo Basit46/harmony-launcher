@@ -15,6 +15,10 @@
   .map li {
     @apply font-semibold text-[17px] leading-[145.3%] text-white;
   }
+
+  .backers-wrap div {
+    @apply w-[311px] overflow-hidden grid place-items-center;
+  }
 }
 
 body {

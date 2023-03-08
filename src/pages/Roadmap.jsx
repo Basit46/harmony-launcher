@@ -22,8 +22,8 @@ const Roadmap = () => {
 
   return (
     <div className="home relative h-[82vh] flex">
-      <div className="h-full w-fit mr-[60px]">
-        <div className="w-fit z-[100] mt-[150px]">
+      <div className="h-fit w-fit fixed top-[40%]">
+        <div className="w-fit z-[100]">
           <div
             onClick={goToPlans}
             className={`bg-white rounded-[47px] w-[3px] h-[20px] cursor-pointer ${
@@ -45,7 +45,7 @@ const Roadmap = () => {
         </div>
       </div>
 
-      <div className="z-[20] h-full">
+      <div className="z-[20] h-full ml-[50px]">
         <Outlet />
       </div>
     </div>
