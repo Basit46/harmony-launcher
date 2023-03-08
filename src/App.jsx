@@ -20,6 +20,13 @@ import Advisors from "./components/roadmap/Advisors";
 import TeamMembers from "./components/team/TeamMembers";
 import Questions from "./components/team/Questions";
 import Footer from "./components/team/Footer";
+import Infos from "./components/team/Infos";
+import Ido from "./pages/Ido";
+import Dex from "./pages/Dex";
+import Market from "./pages/Market";
+import Insights from "./pages/Insights";
+import Main from "./components/ido/Main";
+import Projects from "./components/ido/Projects";
 
 const App = () => {
   return (
@@ -54,7 +61,16 @@ const App = () => {
             <Route path="" element={<TeamMembers />} />
             <Route path="questions" element={<Questions />} />
             <Route path="footer" element={<Footer />} />
+            <Route path="footer/infos" element={<Infos />} />
           </Route>
+
+          <Route path="/ido" element={<Ido />}>
+            <Route path="" element={<Main />} />
+            <Route path="projects" element={<Projects />} />
+          </Route>
+          <Route path="/dex" element={<Dex />} />
+          <Route path="/market" element={<Market />} />
+          <Route path="/insights" element={<Insights />} />
         </Routes>
       </div>
     </div>

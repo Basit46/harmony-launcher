@@ -8,10 +8,10 @@ const TopNav = () => {
       <img src={logo} alt="logo" />
 
       <ul>
-        <NavLink to="/">IDO</NavLink>
-        <NavLink to="/">DEX</NavLink>
-        <NavLink to="/">NFT MARKET PLACE</NavLink>
-        <NavLink to="/">INSIGHTS</NavLink>
+        <NavLink to="/ido">IDO</NavLink>
+        <NavLink to="/dex">DEX</NavLink>
+        <NavLink to="/market">NFT MARKET PLACE</NavLink>
+        <NavLink to="/insights">INSIGHTS</NavLink>
       </ul>
 
       <button className="opacity-0">CONNECT WALLET</button>
