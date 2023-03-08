@@ -17,6 +17,9 @@ import SectionFour from "./components/features/SectionFour";
 import Plans from "./components/roadmap/Plans";
 import Backers from "./components/roadmap/Backers";
 import Advisors from "./components/roadmap/Advisors";
+import TeamMembers from "./components/team/TeamMembers";
+import Questions from "./components/team/Questions";
+import Footer from "./components/team/Footer";
 
 const App = () => {
   return (
@@ -47,7 +50,11 @@ const App = () => {
             <Route path="backers" element={<Backers />} />
             <Route path="advisors" element={<Advisors />} />
           </Route>
-          <Route path="/team" element={<Team />} />
+          <Route path="/team" element={<Team />}>
+            <Route path="" element={<TeamMembers />} />
+            <Route path="questions" element={<Questions />} />
+            <Route path="footer" element={<Footer />} />
+          </Route>
         </Routes>
       </div>
     </div>
