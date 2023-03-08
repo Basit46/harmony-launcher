@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.cdnfonts.com/css/qanelas-soft");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+@layer components {
+  .top-nav ul a {
+    @apply ml-[20px] opacity-80 border px-5 py-2.5 rounded-[30px] border-solid border-white font-bold font-Qanelas text-[15px] leading-[19px] text-white;
+  }
+  .left-nav ul a {
+    @apply w-fit text-xl text-center leading-6 text-white font-Qanelas px-[30px] py-2.5;
+  }
+  .map li {
+    @apply font-semibold text-[17px] leading-[145.3%] text-white;
+  }
+}
+
+body {
+  position: relative;
+}
+
+.main {
+  background: url("./assets/bgDown.svg"),
+    radial-gradient(100% 100% at 50% 0%, #132647 26.42%, #070b1a 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main::-webkit-scrollbar {
+  z-index: 499;
+}
+.left-nav ul a.active {
+  background: linear-gradient(
+    360deg,
+    #816dfd -609.7%,
+    rgba(129, 109, 253, 0) 58.96%
+  );
+  color: #816dfd;
+}
+.home button {
+  background: linear-gradient(93.79deg, #6a52fb 3.11%, #9b8aff 96.17%);
+}
+.current-loc {
+  background: #00ffb2;
+  box-shadow: 0px 1px 9px rgba(0, 255, 178, 0.71);
+}
+.offerBox {
+  background: rgba(0, 0, 0, 0.15);
+}
