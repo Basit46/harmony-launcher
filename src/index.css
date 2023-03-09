@@ -62,13 +62,29 @@
   .dex .connect-btn {
     background: linear-gradient(93.79deg, #6a52fb 3.11%, #9b8aff 96.17%);
   }
+  .modal .tokens div {
+    @apply flex items-center;
+  }
+  .modal .tokens div.active {
+    @apply p-[5px] rounded-[11px] opacity-60;
+  }
+  .modal .tokens div p {
+    @apply ml-[5px] text-[17px] leading-[21px] text-white;
+  }
+}
+
+.tokens-wrap::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  border: 3px solid orange;
 }
 
 body {
   position: relative;
-}
-
-.main {
+  height: fit-content;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: url("./assets/bgDown.svg"),
     radial-gradient(100% 100% at 50% 0%, #132647 26.42%, #070b1a 100%);
   background-repeat: no-repeat;

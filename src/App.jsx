@@ -1,7 +1,7 @@
 import React from "react";
 import LeftNav from "./components/LeftNav";
 import TopNav from "./components/TopNav";
-// import circle from "./assets/circle.png";
+import circle from "./assets/circle.png";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import UseCases from "./pages/UseCases";
@@ -30,16 +30,16 @@ import Projects from "./components/ido/Projects";
 
 const App = () => {
   return (
-    <div className="relative main bg-black h-screen w-screen text-white overflow-x-hidden overflow-y-auto">
-      {/* <img
-        className="sticky top-[0px] left-[100%] right-0 w-[351px] h-[351px]  z-[50]"
+    <div className="relative main h-fit w-full text-white font-Qanelas ">
+      <img
+        className="fixed top-[0px] right-0 w-[351px] h-[351px]  z-[150]"
         src={circle}
         alt="vector"
-      /> */}
+      />
       <TopNav />
       <LeftNav />
 
-      <div className="ml-[21vw] h-fit font-Qanelas">
+      <div className="ml-[21vw] h-fit">
         <Routes>
           <Route path="/" element={<Home />}>
             <Route path="" element={<Hero />} />
