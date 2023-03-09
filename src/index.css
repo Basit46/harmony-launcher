@@ -49,6 +49,19 @@
   table .token-sec {
     background: rgba(152, 135, 255, 0.06);
   }
+
+  .dex ul li {
+    @apply font-semibold text-[15px] leading-[18px] text-[#CBDDFF] border px-2.5 py-1.5 rounded-[10px] border-solid border-[rgba(255,255,255,0.15)];
+  }
+  .dex ul li.active {
+    @apply text-[#11213E] bg-[#00FFB2];
+  }
+  .dex .chart-label p {
+    @apply text-xs leading-[14px] text-white;
+  }
+  .dex .connect-btn {
+    background: linear-gradient(93.79deg, #6a52fb 3.11%, #9b8aff 96.17%);
+  }
 }
 
 body {
