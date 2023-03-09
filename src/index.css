@@ -19,6 +19,36 @@
   .backers-wrap div {
     @apply w-[311px] overflow-hidden grid place-items-center;
   }
+  .projects ul li {
+    @apply text-lg leading-[21px] text-[#9685FF] cursor-pointer;
+  }
+  .projects ul li.active {
+    @apply rounded-[9px] text-white p-[5px];
+    background: linear-gradient(93.79deg, #6a52fb 3.11%, #9b8aff 96.17%);
+  }
+  table {
+    @apply w-full border-collapse;
+  }
+  thead tr {
+    background: #1a2843;
+    border-radius: 5px 5px 0px 0px;
+  }
+  tbody tr {
+    @apply border-b-[1px] border-[#1A2843] bg-[#142036];
+  }
+  thead th,
+  tbody td {
+    @apply py-[17px] px-[10px] w-fit;
+  }
+
+  th,
+  td {
+    @apply text-right;
+  }
+
+  table .token-sec {
+    background: rgba(152, 135, 255, 0.06);
+  }
 }
 
 body {
@@ -31,9 +61,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-main::-webkit-scrollbar {
-  z-index: 499;
-}
+
 .left-nav ul a.active {
   background: linear-gradient(
     360deg,
@@ -103,4 +131,9 @@ main::-webkit-scrollbar {
   line-height: 24px;
 
   color: #ffffff;
+}
+
+.projects .input-wrap {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
 }

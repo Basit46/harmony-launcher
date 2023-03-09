@@ -1,7 +1,51 @@
 import React from "react";
+import { FaSearch } from "react-icons/fa";
+import Project from "./Project";
 
 const Projects = () => {
-  return <div>Projects</div>;
+  return (
+    <div className="projects w-[95%]">
+      <div className="input-wrap w-full h-[56px] flex items-center rounded-[10px] px-[10px]">
+        <input
+          className="w-full h-full bg-transparent p-[10px] rounded-[10px] outline-none"
+          placeholder="Search by project name, token contract address or token symbol"
+          type="text"
+        />
+        <FaSearch />
+      </div>
+
+      <ul className="flex items-center space-x-[40px] mt-[35px]">
+        <li className="active">ALL</li>
+        <li>Ethereum</li>
+        <li>BNB Chain</li>
+        <li>Polygon</li>
+        <li>Celo</li>
+        <li>Avalanche</li>
+      </ul>
+
+      <div className="mt-[35px] h-[350px] overflow-x-hidden overflow-y-au">
+        <table className="table-auto h-fit">
+          <thead>
+            <tr>
+              <th className="">Project name</th>
+              <th className="">Type</th>
+              <th>Participants</th>
+              <th>Total name</th>
+              <th>Current price</th>
+              <th>All price IDO</th>
+              <th className="">Ended in</th>
+              <th className="">Chains</th>
+            </tr>
+          </thead>
+          <tbody>
+            <Project />
+            <Project />
+            <Project />
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
 };
 
 export default Projects;
