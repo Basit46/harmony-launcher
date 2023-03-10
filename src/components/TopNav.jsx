@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
-import { NavLink } from "react-router-dom";
+import wallet from "../assets/Wallet icon.svg";
+import { NavLink, useLocation } from "react-router-dom";
 
 const TopNav = () => {
+  const location = useLocation();
+
+  const [showConnectBtn, setShowConnectBtn] = useState(false);
+
+  useEffect(() => {
+    if (
+      location.pathname.includes("ido") ||
+      location.pathname.includes("dex") ||
+      location.pathname.includes("market") ||
+      location.pathname.includes("insights")
+    ) {
+      setShowConnectBtn(true);
+    } else {
+      setShowConnectBtn(false);
+    }
+
+    document.title = `Harmony Launcher | ${
+      location.pathname !== "/"
+        ? location.pathname.slice(1).toUpperCase()
+        : "HOME"
+    }`;
+  }, [location]);
   return (
     <div className="z-[50] top-nav backdrop-blur-[50px] sticky top-0 left-0 h-[18vh] w-screen flex justify-between items-center px-[50px] py-[10px]">
       <img src={logo} alt="logo" />
@@ -14,7 +37,16 @@ const TopNav = () => {
         <NavLink to="/insights">INSIGHTS</NavLink>
       </ul>
 
-      <button className="opacity-0">CONNECT WALLET</button>
+      <button
+        className={`${
+          !showConnectBtn && "opacity-0"
+        } flex items-center border rounded-[42px] border-solid border-white px-5 py-2.5`}
+      >
+        <img src={wallet} alt="wallet icon" />
+        <p className="font-medium text-xl leading-6 text-white ml-[16px]">
+          Connect Wallet
+        </p>
+      </button>
     </div>
   );
 };

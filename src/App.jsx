@@ -27,6 +27,7 @@ import Market from "./pages/Market";
 import Insights from "./pages/Insights";
 import Main from "./components/ido/Main";
 import Projects from "./components/ido/Projects";
+import ArticleDetails from "./components/insights/ArticleDetails";
 
 const App = () => {
   return (
@@ -71,6 +72,7 @@ const App = () => {
           <Route path="/dex" element={<Dex />} />
           <Route path="/market" element={<Market />} />
           <Route path="/insights" element={<Insights />} />
+          <Route path="/insights/:articleId" element={<ArticleDetails />} />
         </Routes>
       </div>
     </div>

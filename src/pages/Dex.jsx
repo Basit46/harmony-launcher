@@ -109,7 +109,7 @@ const Dex = () => {
                 <div className="flex items-center bg-[#FFFFFF14] px-2.5 py-[5px] rounded-[100px]">
                   <img src={tetherLogo} alt="eth" />
                   <p className="ml-[10px] mr-[8px] font-semibold text-lg leading-[22px] text-[rgba(255,255,255,0.36)]">
-                    ETH
+                    USDT
                   </p>
                   <AiFillCaretDown onClick={showModal} />
                 </div>
