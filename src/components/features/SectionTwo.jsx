@@ -3,7 +3,7 @@ import cap from "../../assets/cap.png";
 
 const SectionTwo = () => {
   return (
-    <div className="flex justify-between pt-[60px]">
+    <div className="flex h-[82vh] justify-between pt-[60px]">
       <div className="w-[70%]">
         <h1 className="text-[35px] leading-[159.69%] text-white font-Russo">
           Harmony Incubator
