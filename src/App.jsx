@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import LeftNav from "./components/LeftNav";
 import TopNav from "./components/TopNav";
 import circle from "./assets/circle.png";
@@ -28,8 +28,11 @@ import Insights from "./pages/Insights";
 import Main from "./components/ido/Main";
 import Projects from "./components/ido/Projects";
 import ArticleDetails from "./components/insights/ArticleDetails";
+import ConnectWalletModal from "./components/ConnectWalletModal";
 
 const App = () => {
+  const [openWalletModal, setOpenWalletModal] = useState(false);
+
   return (
     <div className="relative main h-fit w-full text-white font-Qanelas ">
       <img
@@ -37,8 +40,12 @@ const App = () => {
         src={circle}
         alt="vector"
       />
-      <TopNav />
+      <TopNav setOpenWalletModal={setOpenWalletModal} />
       <LeftNav />
+      <ConnectWalletModal
+        openWalletModal={openWalletModal}
+        setOpenWalletModal={setOpenWalletModal}
+      />
 
       <div className="ml-[21vw] h-fit">
         <Routes>
