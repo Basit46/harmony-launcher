@@ -71,6 +71,27 @@
   .modal .tokens div p {
     @apply ml-[5px] text-[17px] leading-[21px] text-white;
   }
+  .market .line {
+    width: 496px;
+    height: 7px;
+    background: linear-gradient(
+      90deg,
+      #00ffb2 0%,
+      rgba(0, 255, 178, 0.2) 26.04%,
+      rgba(0, 255, 178, 0.05) 53.13%,
+      rgba(0, 255, 178, 0.2) 77.08%,
+      #00ffb2 100%
+    );
+    border: 3px solid;
+    border-image-source: linear-gradient(
+      90deg,
+      #00ffb2 0%,
+      rgba(0, 255, 178, 0.2) 26.04%,
+      rgba(0, 255, 178, 0.05) 53.13%,
+      rgba(0, 255, 178, 0.2) 77.08%,
+      #00ffb2 100%
+    );
+  }
 }
 
 .tokens-wrap::-webkit-scrollbar-thumb {

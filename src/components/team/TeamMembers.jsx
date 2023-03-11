@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import img1 from "../../assets/member1.svg";
 import img2 from "../../assets/member2.png";
 import img3 from "../../assets/member3.png";
@@ -16,7 +17,11 @@ const TeamMembers = () => {
             src={img1}
             alt="advisor"
           />
-          <p className="absolute top-[10px] right-[10px] text-[blue]">In</p>
+          <Link to="/">
+            <p className="absolute top-[10px] right-[10px] text-[blue] cursor-pointer">
+              In
+            </p>
+          </Link>
 
           <h1 className="font-semibold text-[25px] leading-[31px] text-center text-[#00FFB2] mt-[80px]">
             Harshad
@@ -32,7 +37,11 @@ const TeamMembers = () => {
             src={img2}
             alt="advisor"
           />
-          <p className="absolute top-[10px] right-[10px] text-[blue]">In</p>
+          <Link to="/">
+            <p className="absolute top-[10px] right-[10px] text-[blue] cursor-pointer">
+              In
+            </p>
+          </Link>
 
           <h1 className="font-semibold text-[25px] leading-[31px] text-center text-[#00FFB2] mt-[80px]">
             Ankit
@@ -48,7 +57,11 @@ const TeamMembers = () => {
             src={img3}
             alt="advisor"
           />
-          <p className="absolute top-[10px] right-[10px] text-[blue]">In</p>
+          <Link to="/">
+            <p className="absolute top-[10px] right-[10px] text-[blue] cursor-pointer">
+              In
+            </p>
+          </Link>
 
           <h1 className="font-semibold text-[25px] leading-[31px] text-center text-[#00FFB2] mt-[80px]">
             Prashant
