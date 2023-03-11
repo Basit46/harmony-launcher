@@ -33,7 +33,7 @@ const App = () => {
   return (
     <div className="relative main h-fit w-full text-white font-Qanelas ">
       <img
-        className="fixed top-[0px] right-0 w-[351px] h-[351px]  z-[150]"
+        className="fixed top-[0px] right-0 w-[200px] h-[200px]  z-[150]"
         src={circle}
         alt="vector"
       />

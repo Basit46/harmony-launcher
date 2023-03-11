@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { articleItems } from "../../assets/sources/articleItems";
 import { FaSearch } from "react-icons/fa";
+import img from "../../assets/Rectangle 110.svg";
 
 const ArticleDetails = () => {
   const { articleId } = useParams();
@@ -38,14 +39,40 @@ const ArticleDetails = () => {
         </div>
       </div>
 
-      <div className="mt-[50px] h-[500px] w-[400px] bg-[red]">
-        <div className="flex w-full h-[56px]">
+      <div className="mt-[50px] h-fit w-[400px]">
+        <div className="flex items-center w-full h-[56px] rounded-[10px] p-[10px] backdrop-blur-[10px] bg-[#00000033]">
           <input
-            className="bg-transparent p-[4px] w-full"
+            className="bg-transparent p-[4px] w-full placeholder:text-[#868C98]"
             type="text"
             placeholder="Search"
           />
-          <FaSearch />
+          <FaSearch className="text-[#868C98]" />
+        </div>
+        <div className="p-[10px]">
+          <h1 className="mt-[25px] mb-[28px] font-Russo text-[20px] leading-[24px] ">
+            Recent Posts
+          </h1>
+          <div className="w-full flex items-center mb-[36px]">
+            <img className="mr-[16px]" src={img} alt="featured" />
+            <p className="font-medium text-[20px] leading-[24px]">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+          <div className="w-full flex items-center mb-[36px]">
+            <img className="mr-[16px]" src={img} alt="featured" />
+            <p className="font-medium text-[20px] leading-[24px]">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+          <div className="w-full flex items-center mb-[36px]">
+            <img className="mr-[16px]" src={img} alt="featured" />
+            <p className="font-medium text-[20px] leading-[24px]">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
         </div>
       </div>
     </div>
