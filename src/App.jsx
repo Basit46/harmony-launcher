@@ -34,55 +34,62 @@ const App = () => {
   const [openWalletModal, setOpenWalletModal] = useState(false);
 
   return (
-    <div className="relative main h-fit w-full text-white font-Qanelas ">
-      <img
-        className="fixed top-[0px] right-0 w-[200px] h-[200px]  z-[150]"
-        src={circle}
-        alt="vector"
-      />
-      <TopNav setOpenWalletModal={setOpenWalletModal} />
-      <LeftNav />
-      <ConnectWalletModal
-        openWalletModal={openWalletModal}
-        setOpenWalletModal={setOpenWalletModal}
-      />
-
-      <div className="ml-[21vw] h-fit">
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route path="" element={<Hero />} />
-            <Route path="about" element={<About />} />
-          </Route>
-          <Route path="/usecases" element={<UseCases />} />
-          <Route path="/features" element={<Features />}>
-            <Route path="" element={<SectionOne />} />
-            <Route path="2" element={<SectionTwo />} />
-            <Route path="3" element={<SectionThree />} />
-            <Route path="4" element={<SectionFour />} />
-          </Route>
-          <Route path="/roadmap" element={<Roadmap />}>
-            <Route path="" element={<Plans />} />
-            <Route path="backers" element={<Backers />} />
-            <Route path="advisors" element={<Advisors />} />
-          </Route>
-          <Route path="/team" element={<Team />}>
-            <Route path="" element={<TeamMembers />} />
-            <Route path="questions" element={<Questions />} />
-            <Route path="footer" element={<Footer />} />
-            <Route path="footer/infos" element={<Infos />} />
-          </Route>
-
-          <Route path="/ido" element={<Ido />}>
-            <Route path="" element={<Main />} />
-            <Route path="projects" element={<Projects />} />
-          </Route>
-          <Route path="/dex" element={<Dex />} />
-          <Route path="/market" element={<Market />} />
-          <Route path="/insights" element={<Insights />} />
-          <Route path="/insights/:articleId" element={<ArticleDetails />} />
-        </Routes>
+    <>
+      <div className="lg:hidden h-screen w-screen grid place-items-center">
+        <h1 className="text-[2.5rem] text-white text-center">
+          SCREEN SIZE NOT AVAILABLE CURRENTLY
+        </h1>
       </div>
-    </div>
+      <div className="hidden lg:block relative main h-fit w-full text-white font-Qanelas ">
+        <img
+          className="fixed top-[0px] right-0 w-[200px] h-[200px]  z-[150]"
+          src={circle}
+          alt="vector"
+        />
+        <TopNav setOpenWalletModal={setOpenWalletModal} />
+        <LeftNav />
+        <ConnectWalletModal
+          openWalletModal={openWalletModal}
+          setOpenWalletModal={setOpenWalletModal}
+        />
+
+        <div className="ml-[21vw] h-fit">
+          <Routes>
+            <Route path="/" element={<Home />}>
+              <Route path="" element={<Hero />} />
+              <Route path="about" element={<About />} />
+            </Route>
+            <Route path="/usecases" element={<UseCases />} />
+            <Route path="/features" element={<Features />}>
+              <Route path="" element={<SectionOne />} />
+              <Route path="2" element={<SectionTwo />} />
+              <Route path="3" element={<SectionThree />} />
+              <Route path="4" element={<SectionFour />} />
+            </Route>
+            <Route path="/roadmap" element={<Roadmap />}>
+              <Route path="" element={<Plans />} />
+              <Route path="backers" element={<Backers />} />
+              <Route path="advisors" element={<Advisors />} />
+            </Route>
+            <Route path="/team" element={<Team />}>
+              <Route path="" element={<TeamMembers />} />
+              <Route path="questions" element={<Questions />} />
+              <Route path="footer" element={<Footer />} />
+              <Route path="footer/infos" element={<Infos />} />
+            </Route>
+
+            <Route path="/ido" element={<Ido />}>
+              <Route path="" element={<Main />} />
+              <Route path="projects" element={<Projects />} />
+            </Route>
+            <Route path="/dex" element={<Dex />} />
+            <Route path="/market" element={<Market />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/:articleId" element={<ArticleDetails />} />
+          </Routes>
+        </div>
+      </div>
+    </>
   );
 };
 
