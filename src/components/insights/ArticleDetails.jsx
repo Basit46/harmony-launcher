@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { articleItems } from "../../assets/sources/articleItems";
+import { FaSearch } from "react-icons/fa";
 
 const ArticleDetails = () => {
   const { articleId } = useParams();
@@ -37,7 +38,16 @@ const ArticleDetails = () => {
         </div>
       </div>
 
-      <div className="mt-[50px] h-[500px] w-[400px] bg-[red]"></div>
+      <div className="mt-[50px] h-[500px] w-[400px] bg-[red]">
+        <div className="flex w-full h-[56px]">
+          <input
+            className="bg-transparent p-[4px] w-full"
+            type="text"
+            placeholder="Search"
+          />
+          <FaSearch />
+        </div>
+      </div>
     </div>
   );
 };
