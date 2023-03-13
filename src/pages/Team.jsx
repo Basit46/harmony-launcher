@@ -46,7 +46,7 @@ const Team = () => {
           </div>
         </div>
 
-        <div className="z-[20] h-full">
+        <div className="z-[20] h-full w-full">
           <Outlet />
         </div>
       </div>

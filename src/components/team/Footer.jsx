@@ -21,20 +21,20 @@ const Footer = () => {
 
       <div className="flex flex-col justify-center mr-[40px]">
         <Link
-          to="infos"
+          to="/privacy-policy"
           className="font-bold text-xl leading-[25px] underline text-white"
         >
           Privacy Policy
         </Link>
 
         <Link
-          to="infos"
+          to="/privacy-policy"
           className="font-bold text-xl leading-[25px] underline text-white my-[136px]"
         >
           Terms Of Service
         </Link>
         <Link
-          to="infos"
+          to="/privacy-policy"
           className="font-bold text-xl leading-[25px] underline text-white"
         >
           Contact Us

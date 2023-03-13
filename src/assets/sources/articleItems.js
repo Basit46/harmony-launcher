@@ -1,7 +1,7 @@
-import img1 from "../articleImg1.svg";
-import img2 from "../articleImg2.svg";
-import img3 from "../articleImg3.svg";
-import img4 from "../articleImg4.svg";
+import img1 from "../articleImg1.png";
+import img2 from "../articleImg2.png";
+import img3 from "../articleImg3.png";
+import img4 from "../articleImg4.png";
 
 export const articleItems = [
   {

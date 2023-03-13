@@ -31,7 +31,7 @@ const TopNav = ({ setOpenWalletModal }) => {
     }`;
   }, [location]);
   return (
-    <div className="z-[500] top-nav backdrop-blur-[50px] sticky top-0 left-0 h-[18vh] w-screen flex justify-between items-center px-[50px] py-[10px]">
+    <div className="z-[500] top-nav sticky top-0 left-0 h-[18vh] w-screen flex justify-between items-center px-[50px] py-[10px]">
       <img src={logo} alt="logo" />
 
       <ul>

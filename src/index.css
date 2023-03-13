@@ -106,8 +106,9 @@ body {
   width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
-  background: url("./assets/bgDown.svg"),
-    radial-gradient(100% 100% at 50% 0%, #132647 26.42%, #070b1a 100%);
+  /* background: url("./assets/bgDown.svg"),
+    radial-gradient(100% 100% at 50% 0%, #132647 26.42%, #070b1a 100%); */
+  background-color: red;
   background-repeat: no-repeat;
   background-size: cover;
 }

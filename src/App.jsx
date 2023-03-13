@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import LeftNav from "./components/LeftNav";
 import TopNav from "./components/TopNav";
 import circle from "./assets/circle.png";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import UseCases from "./pages/UseCases";
 import Features from "./pages/Features";
@@ -20,7 +20,7 @@ import Advisors from "./components/roadmap/Advisors";
 import TeamMembers from "./components/team/TeamMembers";
 import Questions from "./components/team/Questions";
 import Footer from "./components/team/Footer";
-import Infos from "./components/team/Infos";
+import PrivacyPolicy from "./pages/privacyPolicy";
 import Ido from "./pages/Ido";
 import Dex from "./pages/Dex";
 import Market from "./pages/Market";
@@ -29,9 +29,11 @@ import Main from "./components/ido/Main";
 import Projects from "./components/ido/Projects";
 import ArticleDetails from "./components/insights/ArticleDetails";
 import ConnectWalletModal from "./components/ConnectWalletModal";
+import { AnimatePresence } from "framer-motion";
 
 const App = () => {
   const [openWalletModal, setOpenWalletModal] = useState(false);
+  const location = useLocation();
 
   return (
     <>
@@ -42,7 +44,7 @@ const App = () => {
       </div>
       <div className="hidden lg:block relative main h-fit w-full text-white font-Qanelas ">
         <img
-          className="fixed top-[0px] right-0 w-[200px] h-[200px]  z-[150]"
+          className="fixed top-[0px] right-0 w-[170px] h-[170px] z-[150]"
           src={circle}
           alt="vector"
         />
@@ -54,39 +56,40 @@ const App = () => {
         />
 
         <div className="ml-[21vw] h-fit">
-          <Routes>
-            <Route path="/" element={<Home />}>
-              <Route path="" element={<Hero />} />
-              <Route path="about" element={<About />} />
-            </Route>
-            <Route path="/usecases" element={<UseCases />} />
-            <Route path="/features" element={<Features />}>
-              <Route path="" element={<SectionOne />} />
-              <Route path="2" element={<SectionTwo />} />
-              <Route path="3" element={<SectionThree />} />
-              <Route path="4" element={<SectionFour />} />
-            </Route>
-            <Route path="/roadmap" element={<Roadmap />}>
-              <Route path="" element={<Plans />} />
-              <Route path="backers" element={<Backers />} />
-              <Route path="advisors" element={<Advisors />} />
-            </Route>
-            <Route path="/team" element={<Team />}>
-              <Route path="" element={<TeamMembers />} />
-              <Route path="questions" element={<Questions />} />
-              <Route path="footer" element={<Footer />} />
-              <Route path="footer/infos" element={<Infos />} />
-            </Route>
-
-            <Route path="/ido" element={<Ido />}>
-              <Route path="" element={<Main />} />
-              <Route path="projects" element={<Projects />} />
-            </Route>
-            <Route path="/dex" element={<Dex />} />
-            <Route path="/market" element={<Market />} />
-            <Route path="/insights" element={<Insights />} />
-            <Route path="/insights/:articleId" element={<ArticleDetails />} />
-          </Routes>
+          <AnimatePresence>
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<Home />}>
+                <Route path="" element={<Hero />} />
+                <Route path="about" element={<About />} />
+              </Route>
+              <Route path="/usecases" element={<UseCases />} />
+              <Route path="/features" element={<Features />}>
+                <Route path="" element={<SectionOne />} />
+                <Route path="2" element={<SectionTwo />} />
+                <Route path="3" element={<SectionThree />} />
+                <Route path="4" element={<SectionFour />} />
+              </Route>
+              <Route path="/roadmap" element={<Roadmap />}>
+                <Route path="" element={<Plans />} />
+                <Route path="backers" element={<Backers />} />
+                <Route path="advisors" element={<Advisors />} />
+              </Route>
+              <Route path="/team" element={<Team />}>
+                <Route path="" element={<TeamMembers />} />
+                <Route path="questions" element={<Questions />} />
+                <Route path="footer" element={<Footer />} />
+              </Route>
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/ido" element={<Ido />}>
+                <Route path="" element={<Main />} />
+                <Route path="projects" element={<Projects />} />
+              </Route>
+              <Route path="/dex" element={<Dex />} />
+              <Route path="/market" element={<Market />} />
+              <Route path="/insights" element={<Insights />} />
+              <Route path="/insights/:articleId" element={<ArticleDetails />} />
+            </Routes>
+          </AnimatePresence>
         </div>
       </div>
     </>

@@ -1,9 +1,15 @@
 import React from "react";
 import Earth from "../../assets/Earth.svg";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="flex justify-between">
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
+      exit={{ y: "100%", opacity: 0, transition: { duration: 2 } }}
+      className="h-[82vh] flex justify-between"
+    >
       <div className="w-[50%]">
         <h1 className="text-[64px] leading-[77px] text-white font-Russo">
           About US
@@ -20,10 +26,8 @@ const About = () => {
         </p>
       </div>
 
-      <div className="mr-[40px]">
-        <img src={Earth} alt="Earth" />
-      </div>
-    </div>
+      <div className="mr-[40px]">{/* <img src={Earth} alt="Earth" /> */}</div>
+    </motion.div>
   );
 };
 

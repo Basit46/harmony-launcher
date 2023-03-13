@@ -1,9 +1,15 @@
 import React from "react";
 import Rocket from "../../assets/rocket.svg";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: 0, opacity: 1, transition: { duration: 2, delay: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+      className="h-[82vh]"
+    >
       <h1 className="font-Russo text-[64px] leading-[77px] text-white">
         World’s First <span className="text-[#00FFB2]">IDO + IGO</span>{" "}
         Incubator & Launchpad
@@ -18,13 +24,12 @@ const Hero = () => {
       <button className="px-5 py-[15px] rounded-[30px] font-medium text-xl leading-6 text-white mt-[32px]">
         Apple For IOD
       </button>
-
-      <img
+      {/* <img
         className="z-[1] fixed h-[80vh] right-[90px] bottom-0"
         src={Rocket}
         alt="rocket"
-      />
-    </div>
+      /> */}
+    </motion.div>
   );
 };
 
