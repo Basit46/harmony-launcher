@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { articleItems } from "../../assets/sources/articleItems";
 import { FaSearch } from "react-icons/fa";
-import img from "../../assets/Rectangle 110.svg";
+import img from "../../assets/articleImg3.png";
 
 const ArticleDetails = () => {
   const { articleId } = useParams();

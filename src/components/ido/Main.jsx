@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/idoImg.svg";
+import img from "../../assets/idoImg.png";
 import crypto from "../../assets/crypto.png";
 import sticker from "../../assets/sticker.png";
 
