@@ -10,10 +10,15 @@ import img8 from "../../assets/image 27.svg";
 import img9 from "../../assets/image 28.svg";
 import img10 from "../../assets/image 29.svg";
 import img11 from "../../assets/image 30.svg";
+import { motion } from "framer-motion";
 
 const Backers = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+    >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo">
         Our Backers
       </h1>
@@ -52,7 +57,7 @@ const Backers = () => {
           <img src={img11} alt="backer logo" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,10 +1,16 @@
 import React from "react";
 import rocket from "../../assets/rocket2.png";
+import { motion } from "framer-motion";
 
 const SectionOne = () => {
   return (
-    <div className="h-[82vh] w-full flex justify-between overflow-hidden">
-      <div className="w-[75%]">
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+      className="h-[82vh] w-full flex justify-between overflow-hidden"
+    >
+      <div className="w-[75%] 2xl:w-[50%]">
         <h1 className="font-Russo text-[64px] leading-[77px] text-white">
           Our Technologies
         </h1>
@@ -28,7 +34,7 @@ const SectionOne = () => {
       <div className="mr-[10px]">
         <img src={rocket} alt="rocket" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

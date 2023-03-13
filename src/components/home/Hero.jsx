@@ -24,11 +24,11 @@ const Hero = () => {
       <button className="px-5 py-[15px] rounded-[30px] font-medium text-xl leading-6 text-white mt-[32px]">
         Apple For IOD
       </button>
-      {/* <img
+      <img
         className="z-[1] fixed h-[80vh] right-[90px] bottom-0"
         src={Rocket}
         alt="rocket"
-      /> */}
+      />
     </motion.div>
   );
 };

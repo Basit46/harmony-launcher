@@ -1,10 +1,16 @@
 import React from "react";
 import { featureItems } from "../../assets/sources/featuresItems";
 import FeaturesBox from "./FeaturesBox";
+import { motion } from "framer-motion";
 
 const SectionFour = () => {
   return (
-    <div className="h-fit">
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+      className="h-fit"
+    >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo">
         Advantages
       </h1>
@@ -17,7 +23,7 @@ const SectionFour = () => {
           <FeaturesBox key={index} item={item} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

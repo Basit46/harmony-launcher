@@ -1,10 +1,26 @@
 import React, { useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
 const Features = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const [currentLoc, setCurrentLoc] = useState(1);
+  const loc = () => {
+    if (location.pathname === "/features") {
+      return 1;
+    }
+    if (location.pathname === "/features/2") {
+      return 2;
+    }
+    if (location.pathname === "/features/3") {
+      return 3;
+    }
+    if (location.pathname === "/features/4") {
+      return 4;
+    }
+    return 1;
+  };
+  const [currentLoc, setCurrentLoc] = useState(loc());
   const goToOne = () => {
     navigate("");
     setCurrentLoc(1);
@@ -26,7 +42,7 @@ const Features = () => {
   };
 
   return (
-    <div className="home relative h-full flex overflow-x-hidden overflow-y-auto">
+    <div className="home relative h-full flex overflow-x-hidden ">
       <div className="h-fit w-fit fixed top-[40%]">
         <div className="w-fit z-[100]">
           <div

@@ -1,10 +1,16 @@
 import React from "react";
 import { offerItems } from "../assets/sources/OfferItems";
 import OfferBox from "../components/usecases/OfferBox";
+import { motion } from "framer-motion";
 
 const UseCases = () => {
   return (
-    <div className="h-full w-full overflow-x-hidden">
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+      className="h-full w-full overflow-x-hidden"
+    >
       <h1 className="font-Russo text-[64px] leading-[77px] text-white">
         Harmony Launcher's Aim
       </h1>
@@ -20,7 +26,7 @@ const UseCases = () => {
           <OfferBox key={index} item={item} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

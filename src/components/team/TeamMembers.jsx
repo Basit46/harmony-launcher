@@ -3,10 +3,15 @@ import { Link } from "react-router-dom";
 import img1 from "../../assets/member1.svg";
 import img2 from "../../assets/member2.png";
 import img3 from "../../assets/member3.png";
+import { motion } from "framer-motion";
 
 const TeamMembers = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+    >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo mb-[48px]">
         Our Advisors
       </h1>
@@ -71,7 +76,7 @@ const TeamMembers = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

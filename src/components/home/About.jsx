@@ -26,7 +26,9 @@ const About = () => {
         </p>
       </div>
 
-      <div className="mr-[40px]">{/* <img src={Earth} alt="Earth" /> */}</div>
+      <div className="mr-[40px]">
+        <img src={Earth} alt="Earth" />
+      </div>
     </motion.div>
   );
 };

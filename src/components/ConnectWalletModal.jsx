@@ -11,9 +11,9 @@ const ConnectWalletModal = ({ openWalletModal, setOpenWalletModal }) => {
     <div
       className={`${
         openWalletModal ? "" : "hidden"
-      } fixed top-0 w-screen h-screen z-[150]`}
+      } fixed top-0 w-screen h-screen grid place-items-center z-[150]`}
     >
-      <div className="absolute top-[100px] right-[50px] w-[420px] h-[196px] rounded-[30px] bg-[#0b1425]">
+      <div className="w-[420px] h-[196px] rounded-[30px] bg-[#0b1425]">
         <div className="w-full flex justify-between p-[20px] border-b border-solid border-[rgba(255,255,255,0.15)]">
           <p className="font-semibold text-xl leading-6">Select a Token</p>
           <FaTimes onClick={handleClose} className="w-[30px] h-[30px]" />

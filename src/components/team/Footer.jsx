@@ -1,10 +1,16 @@
 import React from "react";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <div className="flex justify-between">
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+      className="flex justify-between"
+    >
       <div className="w-[60%]">
         <h1 className="font-normal text-[35px] leading-[140%] text-white font-Russo">
           The secure and hassle-free way to launch your projects on the Harmony
@@ -40,7 +46,7 @@ const Footer = () => {
           Contact Us
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

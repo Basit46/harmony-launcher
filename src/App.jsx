@@ -37,7 +37,7 @@ const App = () => {
 
   return (
     <>
-      <div className="lg:hidden h-screen w-screen grid place-items-center">
+      <div className="relative lg:hidden h-screen w-screen overflow-y-scroll grid place-items-center">
         <h1 className="text-[2.5rem] text-white text-center">
           SCREEN SIZE NOT AVAILABLE CURRENTLY
         </h1>

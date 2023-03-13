@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import Clouds from "../assets/cloudBtm.svg";
-import { useNavigate, Outlet } from "react-router-dom";
+import { useNavigate, Outlet, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Home = () => {
   const navigate = useNavigate();
-  const [onHeroSection, setOnHeroSection] = useState(true);
+  const location = useLocation();
+
+  const [onHeroSection, setOnHeroSection] = useState(
+    location.pathname === "/about" ? false : true
+  );
 
   const goToHero = async () => {
     await setOnHeroSection(true);
@@ -36,16 +40,16 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="z-[20] h-full">
+      <div className="z-[20] h-[82vh]">
         <Outlet />
       </div>
 
-      {/* <img
+      <img
         className="z-[2] absolute right-0 bottom-0"
         src={Clouds}
         draggable={false}
         alt="clouds"
-      /> */}
+      />
     </motion.div>
   );
 };

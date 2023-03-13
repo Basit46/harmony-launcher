@@ -1,9 +1,23 @@
 import React, { useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
 const Team = () => {
   const navigate = useNavigate();
-  const [currentLoc, setCurrentLoc] = useState(1);
+  const location = useLocation();
+
+  const loc = () => {
+    if (location.pathname === "/team") {
+      return 1;
+    }
+    if (location.pathname === "/team/questions") {
+      return 2;
+    }
+    if (location.pathname === "/team/footer") {
+      return 3;
+    }
+    return 1;
+  };
+  const [currentLoc, setCurrentLoc] = useState(loc());
 
   const goToMembers = () => {
     navigate("");

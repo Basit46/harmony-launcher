@@ -5,6 +5,7 @@ import ethChart from "../assets/ethChart.svg";
 import swap from "../assets/swapIcon.png";
 import { AiFillCaretDown } from "react-icons/ai";
 import ExchangeModal from "../components/dex/ExchangeModal";
+import { motion } from "framer-motion";
 
 const Dex = () => {
   const [show, setShow] = useState(false);
@@ -14,11 +15,20 @@ const Dex = () => {
   };
 
   return (
-    <div className="dex">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        y: "0",
+        opacity: 1,
+        transition: { duration: 0.5 },
+      }}
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+      className="dex"
+    >
       <ExchangeModal show={show} setShow={setShow} />
 
-      <div>
-        <div className="w-[1025px] h-[596px] rounded-[20px] bg-[#111e37] px-[52px] py-[28px] flex flex-col justify-between">
+      <div className="flex flex-wrap">
+        <div className="w-[1025px] h-[596px] mb-[40px] mr-[40px] rounded-[20px] bg-[#111e37] px-[52px] py-[28px] flex flex-col justify-between">
           <div className="">
             <div className="w-full flex space-x-[8px] items-center">
               <div className="flex h-fit">
@@ -71,7 +81,7 @@ const Dex = () => {
           </div>
         </div>
 
-        <div className="w-[431px] h-[596px] rounded-[20px] bg-[#111e37] my-[40px] px-[25px] py-[29px]">
+        <div className="w-[431px] h-[596px] rounded-[20px] bg-[#111e37] mb-[40px] px-[25px] py-[29px]">
           <h1 className="font-semibold text-[22px] leading-[27px] text-white">
             Swap
           </h1>
@@ -87,12 +97,15 @@ const Dex = () => {
                   type="number"
                   placeholder="0.0"
                 />
-                <div className="flex items-center bg-[#FFFFFF14] px-2.5 py-[5px] rounded-[100px]">
+                <div
+                  onClick={showModal}
+                  className="flex items-center bg-[#FFFFFF14] px-2.5 py-[5px] rounded-[100px]"
+                >
                   <img src={ethLogo} alt="eth" />
-                  <p className="ml-[10px] mr-[8px] font-semibold text-lg leading-[22px] text-[rgba(255,255,255,0.36)]">
+                  <p className="cursor-pointer ml-[10px] mr-[8px] font-semibold text-lg leading-[22px] text-[rgba(255,255,255,0.36)]">
                     ETH
                   </p>
-                  <AiFillCaretDown onClick={showModal} />
+                  <AiFillCaretDown />
                 </div>
               </div>
             </div>
@@ -135,7 +148,7 @@ const Dex = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

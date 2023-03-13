@@ -1,10 +1,16 @@
 import React from "react";
 import cap from "../../assets/cap.png";
+import { motion } from "framer-motion";
 
 const SectionTwo = () => {
   return (
-    <div className="flex h-[82vh] justify-between pt-[60px]">
-      <div className="w-[70%]">
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+      className="flex h-[82vh] justify-between pt-[60px]"
+    >
+      <div className="w-[70%] 2xl:w-[50%]">
         <h1 className="text-[35px] leading-[159.69%] text-white font-Russo">
           Harmony Incubator
         </h1>
@@ -21,7 +27,7 @@ const SectionTwo = () => {
       <div className="mr-[10px]">
         <img src={cap} alt="cap" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

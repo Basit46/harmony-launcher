@@ -1,9 +1,23 @@
 import React, { useState } from "react";
-import { useNavigate, Outlet } from "react-router-dom";
+import { useNavigate, Outlet, useLocation } from "react-router-dom";
 
 const Roadmap = () => {
   const navigate = useNavigate();
-  const [currentLoc, setCurrentLoc] = useState(1);
+  const location = useLocation();
+
+  const loc = () => {
+    if (location.pathname === "/roadmap") {
+      return 1;
+    }
+    if (location.pathname === "/roadmap/backers") {
+      return 2;
+    }
+    if (location.pathname === "/roadmap/advisors") {
+      return 3;
+    }
+    return 1;
+  };
+  const [currentLoc, setCurrentLoc] = useState(loc());
 
   const goToPlans = () => {
     navigate("");
@@ -21,7 +35,7 @@ const Roadmap = () => {
   };
 
   return (
-    <div className="home relative h-[82vh] flex">
+    <div className="home relative h-fit flex">
       <div className="h-fit w-fit fixed top-[40%]">
         <div className="w-fit z-[100]">
           <div

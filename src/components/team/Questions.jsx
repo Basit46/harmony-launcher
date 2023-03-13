@@ -1,8 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Questions = () => {
   return (
-    <div className="questions">
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+      className="questions"
+    >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo mb-[48px]">
         Have Any Questions?
       </h1>
@@ -26,7 +32,7 @@ const Questions = () => {
           Send
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

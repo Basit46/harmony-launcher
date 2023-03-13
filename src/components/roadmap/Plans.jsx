@@ -1,9 +1,14 @@
 import React from "react";
 import map from "../../assets/map.svg";
+import { motion } from "framer-motion";
 
 const Plans = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+    >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo">
         Roadmap
       </h1>
@@ -32,7 +37,7 @@ const Plans = () => {
         </div>
         <img src={map} alt="map" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
