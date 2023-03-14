@@ -6,8 +6,10 @@ const Plans = () => {
   return (
     <motion.div
       initial={{ y: "100%", opacity: 0 }}
-      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
-      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
+      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
+      className="h-[82vh]"
     >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo">
         Roadmap
@@ -15,7 +17,7 @@ const Plans = () => {
       <h2 className="uppercase font-Qanelas text-[32px] leading-[38px] text-[#00FFB2] mt-[18px] mb-[40px]">
         CURRENT PLANS
       </h2>
-      <div className="map relative py-[48px]">
+      <div className="map relative pt-[30px] pb-[48px]">
         <div className="absolute top-[18px] left-[7%] h-fit w-fit">
           <li>Harmony Launcher Private Sale</li>
           <li>Public sale</li>

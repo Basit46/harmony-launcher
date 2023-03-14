@@ -6,9 +6,10 @@ const SectionOne = () => {
   return (
     <motion.div
       initial={{ y: "100%", opacity: 0 }}
-      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
-      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
-      className="h-[82vh] w-full flex justify-between overflow-hidden"
+      animate={{ y: "0", opacity: 1, transition: { duration: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
+      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
+      className="h-[82vh] w-full flex justify-between"
     >
       <div className="w-[75%] 2xl:w-[50%]">
         <h1 className="font-Russo text-[64px] leading-[77px] text-white">

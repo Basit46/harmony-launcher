@@ -7,8 +7,9 @@ const Advisors = () => {
   return (
     <motion.div
       initial={{ y: "100%", opacity: 0 }}
-      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
-      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
+      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
       className="h-[82vh]"
     >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo mb-[48px]">

@@ -6,8 +6,12 @@ const About = () => {
   return (
     <motion.div
       initial={{ y: "100%", opacity: 0 }}
-      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 2 } }}
       exit={{ y: "100%", opacity: 0, transition: { duration: 2 } }}
+      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
+      // onAnimationComplete={() =>
+      //   document.body.classList.remove("overflow-hidden")
+      // }
       className="h-[82vh] flex justify-between"
     >
       <div className="w-[50%]">

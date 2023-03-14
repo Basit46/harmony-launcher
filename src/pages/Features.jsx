@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Features = () => {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ const Features = () => {
   };
 
   return (
-    <div className="home relative h-full flex overflow-x-hidden ">
+    <motion.div className="home relative h-full flex overflow-x-hidden ">
       <div className="h-fit w-fit fixed top-[40%]">
         <div className="w-fit z-[100]">
           <div
@@ -72,10 +73,13 @@ const Features = () => {
         </div>
       </div>
 
-      <div className="z-[20] h-full ml-[50px]">
+      <motion.div
+        id="features-outlet"
+        className="z-[20] h-[82vh] overflow-hidden ml-[50px]"
+      >
         <Outlet />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

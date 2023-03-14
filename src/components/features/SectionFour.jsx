@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { featureItems } from "../../assets/sources/featuresItems";
 import FeaturesBox from "./FeaturesBox";
 import { motion } from "framer-motion";
 
 const SectionFour = () => {
+  useEffect(() => {
+    document.body.classList.remove("overflow-hidden");
+    const kunt = document.querySelector("#features-outlet");
+    kunt.classList.remove("overflow-hidden");
+    kunt.classList.remove("h-[82vh]");
+  }, []);
   return (
     <motion.div
       initial={{ y: "100%", opacity: 0 }}
-      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
-      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
+      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
       className="h-fit"
     >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo">

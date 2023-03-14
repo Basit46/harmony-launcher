@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img1 from "../../assets/image 19.svg";
 import img2 from "../../assets/image 20.svg";
 import img3 from "../../assets/image 21.svg";
@@ -13,11 +13,16 @@ import img11 from "../../assets/image 30.svg";
 import { motion } from "framer-motion";
 
 const Backers = () => {
+  useEffect(() => {
+    document.body.classList.remove("overflow-hidden");
+  }, []);
   return (
     <motion.div
       initial={{ y: "100%", opacity: 0 }}
-      animate={{ y: "0", opacity: 1, transition: { duration: 2, delay: 1 } }}
-      exit={{ y: "-100%", opacity: 0, transition: { duration: 2 } }}
+      animate={{ y: "0", opacity: 1, transition: { duration: 1 } }}
+      exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
+      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
+      className="min-h-[82vh]"
     >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo">
         Our Backers
