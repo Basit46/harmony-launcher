@@ -19,7 +19,7 @@ const ArticleDetails = () => {
       <div className="bg-[#111E37] w-[1021px] h-fit backdrop-blur-[5px] rounded-[10px]">
         <div className="w-full h-[414px] rounded-[10px]">
           <img
-            className="w-full h-full object-cover rounded-[10px]"
+            className="object-center w-full h-full object-cover rounded-[10px]"
             src={article?.img}
             alt="article"
           />

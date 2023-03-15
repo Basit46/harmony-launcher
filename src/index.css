@@ -10,7 +10,7 @@
     @apply ml-[20px] opacity-80 border px-5 py-2.5 rounded-[30px] border-solid border-white font-bold font-Qanelas text-[15px] leading-[19px] text-white;
   }
   .left-nav ul a {
-    @apply w-fit text-xl text-center leading-6 text-white font-Qanelas px-[30px] py-2.5;
+    @apply relative overflow-hidden text-xl text-center leading-6 text-white font-Qanelas px-[30px] py-2.5;
   }
   .map li {
     @apply font-semibold text-[17px] leading-[145.3%] text-white;
@@ -112,13 +112,32 @@ body {
   background-size: cover;
 }
 
+.left-nav ul a::after {
+  opacity: 0;
+}
 .left-nav ul a.active {
+  color: #816dfd;
+}
+.left-nav ul a.active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background: linear-gradient(
     360deg,
     #816dfd -609.7%,
     rgba(129, 109, 253, 0) 58.96%
   );
-  color: #816dfd;
+  opacity: 1;
+  transform: translateY(-100%);
+  animation: sliding 0.5s linear forwards;
+}
+@keyframes sliding {
+  to {
+    transform: translateY(0%);
+  }
 }
 .home button {
   background: linear-gradient(93.79deg, #6a52fb 3.11%, #9b8aff 96.17%);
