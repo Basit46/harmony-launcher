@@ -10,7 +10,7 @@
     @apply ml-[20px] opacity-80 border px-5 py-2.5 rounded-[30px] border-solid border-white font-bold font-Qanelas text-[15px] leading-[19px] text-white;
   }
   .left-nav ul a {
-    @apply relative overflow-hidden text-xl text-center leading-6 text-white font-Qanelas px-[30px] py-2.5;
+    @apply relative overflow-hidden text-xl text-left leading-6 text-white font-Qanelas px-[30px] py-2.5;
   }
   .map li {
     @apply font-semibold text-[17px] leading-[145.3%] text-white;

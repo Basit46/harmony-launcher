@@ -1,13 +1,20 @@
 import React from "react";
 import Rocket from "../../assets/rocket.svg";
 import { motion } from "framer-motion";
+import { useOutletContext } from "react-router-dom";
 
 const Hero = () => {
+  const [prevPath, nuPath] = useOutletContext();
+  console.log(prevPath, nuPath);
   return (
     <motion.div
-      initial={{ y: "100%", opacity: 0 }}
+      initial={{
+        y: `${prevPath === "/about" ? "-100%" : "100%"}`,
+        opacity: 0,
+      }}
       animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
       exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
+      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
       className="h-[82vh]"
     >
       <h1 className="font-Russo text-[64px] leading-[77px] text-white">

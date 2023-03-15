@@ -7,22 +7,30 @@ const Home = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  console.log(navigate.location);
+
   const [onHeroSection, setOnHeroSection] = useState(
     location.pathname === "/about" ? false : true
   );
+  const [prevPath, setPrevPath] = useState();
+  const [nuPath, setPath] = useState();
 
   const goToHero = async () => {
+    setPath(prevPath);
+    setPrevPath("/about");
     await setOnHeroSection(true);
     navigate("/");
   };
 
   const goToAbout = async () => {
+    setPath(prevPath);
+    setPrevPath("/about");
     await setOnHeroSection(false);
     navigate("/about");
   };
 
   return (
-    <motion.div className="home relative h-[82vh] flex">
+    <div className="home relative h-[82vh] flex">
       <div className="h-full w-fit mr-[60px]">
         <div className="w-fit z-[100] mt-[150px]">
           <div
@@ -41,7 +49,7 @@ const Home = () => {
       </div>
 
       <div className="z-[20] h-[82vh]">
-        <Outlet />
+        <Outlet context={[prevPath, nuPath]} />
       </div>
 
       <img
@@ -50,7 +58,7 @@ const Home = () => {
         draggable={false}
         alt="clouds"
       />
-    </motion.div>
+    </div>
   );
 };
 
