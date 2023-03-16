@@ -15,7 +15,7 @@ const Insights = () => {
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
       className="min-h-[82vh]"
     >
-      <div className="flex flex-wrap gap-[10px] pb-[20px]">
+      <div className="flex flex-wrap justify-center 2xl:justify-start gap-[10px] pb-[20px]">
         {articleItems.map((article) => (
           <Article key={article.id} article={article} />
         ))}

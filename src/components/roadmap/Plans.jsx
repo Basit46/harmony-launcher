@@ -18,11 +18,11 @@ const Plans = () => {
         CURRENT PLANS
       </h2>
       <div className="map relative pt-[30px] pb-[48px]">
-        <div className="absolute top-[18px] left-[7%] h-fit w-fit">
+        <div className="absolute top-[10px] left-[7%] h-fit w-fit">
           <li>Harmony Launcher Private Sale</li>
           <li>Public sale</li>
         </div>
-        <div className="absolute top-0  right-[30%]  h-fit w-fit">
+        <div className="absolute top-[-15px]  right-[30%]  h-fit w-fit">
           <li>Mobile App Testnet </li>
           <li>$Harl TGE & Listing </li>
           <li>AMM DEX Beta V1</li>

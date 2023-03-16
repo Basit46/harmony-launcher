@@ -2,13 +2,28 @@ import React from "react";
 import { HiOutlineArrowLeftCircle } from "react-icons/hi2";
 import { privacyPolicyItems } from "../assets/sources/privacyPolicyItems";
 import Section from "../components/privacyPolicy/Section";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const PrivacyPolicy = () => {
+  const navigate = useNavigate();
+
+  const handleExit = () => {
+    navigate(-1);
+  };
   return (
-    <div className="h-[400vh]">
+    <motion.div
+      initial={{ x: "100%" }}
+      animate={{ x: "0%", transition: { duration: 1 } }}
+      exit={{ x: "100%", transition: { duration: 1 } }}
+      className="h-[400vh]"
+    >
       <div className="flex">
         <div className="mr-[57px]">
-          <HiOutlineArrowLeftCircle className="w-[40px] h-[40px]" />
+          <HiOutlineArrowLeftCircle
+            onClick={handleExit}
+            className="w-[40px] h-[40px]"
+          />
         </div>
         <div className="h-[400px] w-full">
           <div>
@@ -62,7 +77,7 @@ const PrivacyPolicy = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
