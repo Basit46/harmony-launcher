@@ -55,7 +55,7 @@ const App = () => {
           setOpenWalletModal={setOpenWalletModal}
         />
 
-        <div className="ml-[21vw] h-fit">
+        <div className="ml-[20vw] h-fit">
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />}>

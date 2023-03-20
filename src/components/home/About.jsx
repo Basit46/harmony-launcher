@@ -1,11 +1,8 @@
 import React from "react";
 import Earth from "../../assets/Earth.svg";
 import { motion } from "framer-motion";
-import { useOutletContext } from "react-router-dom";
 
 const About = () => {
-  const [onHeroSection] = useOutletContext();
-
   return (
     <motion.div
       initial={{ y: "100%", opacity: 0 }}

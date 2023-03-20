@@ -1,30 +1,28 @@
 import React, { useState } from "react";
 import Clouds from "../assets/cloudBtm.svg";
 import { useNavigate, Outlet, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useNavContext } from "../hooks/Context";
 
 const Home = () => {
+  const { setHomeNav, homeNav, setClone } = useNavContext();
+
   const navigate = useNavigate();
   const location = useLocation();
-
-  console.log(navigate.location);
 
   const [onHeroSection, setOnHeroSection] = useState(
     location.pathname === "/about" ? false : true
   );
-  const [prevPath, setPrevPath] = useState();
-  const [nuPath, setPath] = useState();
 
   const goToHero = async () => {
-    setPath(prevPath);
-    setPrevPath("/about");
+    // setClone(homeNav);
+    setHomeNav(1);
     await setOnHeroSection(true);
     navigate("/");
   };
 
   const goToAbout = async () => {
-    setPath(prevPath);
-    setPrevPath("/about");
+    // setClone(homeNav);
+    setHomeNav(2);
     await setOnHeroSection(false);
     navigate("/about");
   };
@@ -49,7 +47,7 @@ const Home = () => {
       </div>
 
       <div className="z-[20] h-[82vh]">
-        <Outlet context={[prevPath, nuPath]} />
+        <Outlet />
       </div>
 
       <img

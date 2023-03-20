@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HiOutlineArrowLeftCircle } from "react-icons/hi2";
 import { privacyPolicyItems } from "../assets/sources/privacyPolicyItems";
 import Section from "../components/privacyPolicy/Section";
@@ -8,6 +8,10 @@ import { motion } from "framer-motion";
 const PrivacyPolicy = () => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    document.body.classList.remove("overflow-hidden");
+  }, []);
+
   const handleExit = () => {
     navigate(-1);
   };
@@ -16,16 +20,16 @@ const PrivacyPolicy = () => {
       initial={{ x: "100%" }}
       animate={{ x: "0%", transition: { duration: 1 } }}
       exit={{ x: "100%", transition: { duration: 1 } }}
-      className="h-[400vh]"
+      className="h-[1120vh]"
     >
       <div className="flex">
-        <div className="mr-[57px]">
+        <div className="mr-[30px]">
           <HiOutlineArrowLeftCircle
             onClick={handleExit}
             className="w-[40px] h-[40px]"
           />
         </div>
-        <div className="h-[400px] w-full">
+        <div className="h-[400px] w-[90%]">
           <div>
             <h1 className="font-Russo text-[64px] leading-[77px] text-white">
               Harmony Launcher Privacy Policy

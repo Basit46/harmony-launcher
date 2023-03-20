@@ -1,15 +1,14 @@
 import React from "react";
 import Rocket from "../../assets/rocket.svg";
 import { motion } from "framer-motion";
-import { useOutletContext } from "react-router-dom";
+import { useNavContext } from "../../hooks/Context";
 
 const Hero = () => {
-  const [prevPath, nuPath] = useOutletContext();
-  console.log(prevPath, nuPath);
+  const { clone } = useNavContext();
   return (
     <motion.div
       initial={{
-        y: `${prevPath === "/about" ? "-100%" : "100%"}`,
+        y: clone === 1 ? "100%" : "-100%",
         opacity: 0,
       }}
       animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
