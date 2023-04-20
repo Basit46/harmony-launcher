@@ -19,7 +19,7 @@ const Hero = () => {
         } else {
         }
       }}
-      className="h-fit lg:h-[82vh]"
+      className="min-h-[82vh] lg:h-[82vh]"
     >
       <h1 className="font-Russo text-[64px] leading-[77px] text-white">
         World’s First <span className="text-[#00FFB2]">IDO + IGO</span>{" "}

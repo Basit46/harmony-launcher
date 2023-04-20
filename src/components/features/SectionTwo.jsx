@@ -14,7 +14,7 @@ const SectionTwo = () => {
         } else {
         }
       }}
-      className="h-fit lg:h-[82vh] flex flex-col lg:flex-row lg:justify-between pt-[60px]"
+      className="min-h-[82vh] lg:h-[82vh] flex flex-col lg:flex-row lg:justify-between pt-[60px]"
     >
       <div className="w-[95%] lg:w-[70%] 2xl:w-[50%] order-2 lg:order-1">
         <h1 className="text-[35px] leading-[159.69%] text-white font-Russo">

@@ -21,7 +21,7 @@ const SectionFour = () => {
         } else {
         }
       }}
-      className="h-fit"
+      className="min-h-[82vh]"
     >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo">
         Advantages

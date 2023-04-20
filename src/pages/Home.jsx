@@ -26,7 +26,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home relative h-fit lg:h-[82vh] flex">
+    <div className="home relative min:h-[82vh] lg:h-[82vh] flex">
       <div className="h-full w-fit lg:mr-[60px] mx-[20px] lg:mx-0 ">
         <div className="w-fit z-[100] mt-[150px]">
           <div

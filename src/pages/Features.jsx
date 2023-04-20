@@ -75,7 +75,7 @@ const Features = () => {
 
       <motion.div
         id="features-outlet"
-        className="z-[20] h-fit lg:h-[82vh] overflow-hidden ml-[60px] lg:ml-[50px]"
+        className="z-[20] min-h-[82vh] lg:h-[82vh] overflow-hidden ml-[60px] lg:ml-[50px]"
       >
         <Outlet />
       </motion.div>
