@@ -16,7 +16,7 @@ const ArticleDetails = () => {
 
   return (
     <div className="min-h-[82vh] h-fit">
-      <div className="bg-[#111E37] w-[1021px] h-fit backdrop-blur-[5px] rounded-[10px]">
+      <div className="bg-[#111E37] w-full lg:w-[1021px] h-fit backdrop-blur-[5px] rounded-[10px]">
         <div className="w-full h-[414px] rounded-[10px]">
           <img
             className="object-center w-full h-full object-cover rounded-[10px]"
@@ -39,8 +39,8 @@ const ArticleDetails = () => {
         </div>
       </div>
 
-      <div className="mt-[50px] h-fit w-[400px]">
-        <div className="flex items-center w-full h-[56px] rounded-[10px] p-[10px] backdrop-blur-[10px] bg-[#00000033]">
+      <div className="mt-[50px] h-fit w-[98%]">
+        <div className="flex items-center w-[400px] h-[56px] rounded-[10px] p-[10px] backdrop-blur-[10px] bg-[#00000033]">
           <input
             className="bg-transparent p-[4px] w-full placeholder:text-[#868C98]"
             type="text"
@@ -48,7 +48,7 @@ const ArticleDetails = () => {
           />
           <FaSearch className="text-[#868C98]" />
         </div>
-        <div className="p-[10px]">
+        <div className="w-full p-[10px]">
           <h1 className="mt-[25px] mb-[28px] font-Russo text-[20px] leading-[24px] ">
             Recent Posts
           </h1>

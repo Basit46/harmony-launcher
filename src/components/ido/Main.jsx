@@ -5,7 +5,7 @@ import sticker from "../../assets/sticker.png";
 
 const Main = () => {
   return (
-    <div className="ido-main w-full flex justify-between">
+    <div className="ido-main w-full flex flex-col lg:flex-row lg:justify-between">
       <div>
         <h1 className="text-3xl leading-9 text-white font-Russo mb-[20px]">
           Live
@@ -58,7 +58,7 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="mr-[30px]">
+      <div className="mr-0 lg:mr-[30px] mt-[30px] lg:mt-0">
         <h1 className="text-3xl leading-9 text-white font-Russo mb-[20px]">
           Upcoming
         </h1>

@@ -186,9 +186,22 @@ body {
   backdrop-filter: blur(10px);
   border-radius: 20px;
   position: absolute;
-  right: -135px;
+  right: 0px;
   top: 30px;
 }
+@media screen and (min-width: 768px) {
+  .ido-main .blur-box {
+    width: 273px;
+    height: fit-content;
+    background: rgba(12, 20, 41, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    position: absolute;
+    right: -135px;
+    top: 30px;
+  }
+}
+
 .ido-main .blur-box button {
   padding: 15px 20px;
   background: linear-gradient(93.79deg, #6a52fb 3.11%, #9b8aff 96.17%);
