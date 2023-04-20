@@ -9,15 +9,20 @@ const Footer = () => {
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: "0", opacity: 1, transition: { duration: 1 } }}
       exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
-      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
-      className="flex justify-between"
+      onAnimationStart={() => {
+        if (window.innerWidth > 1024) {
+          document.body.classList.add("overflow-hidden");
+        } else {
+        }
+      }}
+      className="min-h-[82vh] lg:h-[82vh] flex flex-col lg:flex-row justify-between"
     >
-      <div className="w-[60%]">
+      <div className="w-[90%] lg:w-[60%]">
         <h1 className="font-normal text-[35px] leading-[140%] text-white font-Russo">
           The secure and hassle-free way to launch your projects on the Harmony
           Network.
         </h1>
-        <div className="flex space-x-[31px] mt-[125px] mb-[138px]">
+        <div className="flex space-x-[31px] mt-[30px] lg:mt-[125px] mb-[30px] lg:mb-[138px]">
           <FaFacebook />
           <FaLinkedin />
         </div>
@@ -26,7 +31,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="flex flex-col justify-center mr-[40px]">
+      <div className="flex flex-row lg:flex-col justify-start lg:justify-center mr-0 lg:mr-[40px] flex-wrap gap-x-[20px] lg:gap-x-0 ">
         <Link
           to="/privacy-policy"
           className="font-bold text-xl leading-[25px] underline text-white"
@@ -36,7 +41,7 @@ const Footer = () => {
 
         <Link
           to="/privacy-policy"
-          className="font-bold text-xl leading-[25px] underline text-white my-[136px]"
+          className="font-bold text-xl leading-[25px] underline text-white lg:my-[136px]"
         >
           Terms Of Service
         </Link>

@@ -13,8 +13,13 @@ const Hero = () => {
       }}
       animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
       exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
-      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
-      className="h-[82vh]"
+      onAnimationStart={() => {
+        if (window.innerWidth > 1024) {
+          document.body.classList.add("overflow-hidden");
+        } else {
+        }
+      }}
+      className="h-fit lg:h-[82vh]"
     >
       <h1 className="font-Russo text-[64px] leading-[77px] text-white">
         World’s First <span className="text-[#00FFB2]">IDO + IGO</span>{" "}
@@ -31,7 +36,7 @@ const Hero = () => {
         Apple For IOD
       </button>
       <img
-        className="z-[1] fixed h-[80vh] right-[90px] bottom-0"
+        className="fixed h-[80vh] right-[90px] bottom-0 z-[-1] opacity-50 lg:opacity-100"
         src={Rocket}
         alt="rocket"
       />

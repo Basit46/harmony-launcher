@@ -5,6 +5,22 @@
 @import url("https://fonts.cdnfonts.com/css/qanelas-soft");
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
+body {
+  position: relative;
+  height: fit-content;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: url("./assets/bgDown.png"),
+    radial-gradient(100% 100% at 50% 0%, #132647 26.42%, #070b1a 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.menu {
+  background: url("./assets/bgDown.png"),
+    radial-gradient(100% 100% at 50% 0%, #132647 26.42%, #070b1a 100%);
+}
+
 @layer components {
   .top-nav ul a {
     @apply ml-[20px] opacity-80 border px-5 py-2.5 rounded-[30px] border-solid border-white font-bold font-Qanelas text-[15px] leading-[19px] text-white;
@@ -14,6 +30,13 @@
   }
   .map li {
     @apply font-semibold text-[17px] leading-[145.3%] text-white;
+  }
+
+  /* .menu ul {
+    @apply;
+  } */
+  .menu ul a {
+    @apply block text-[2rem] mb-[40px] font-Russo hover:text-[#816dfd] hover:duration-300;
   }
 
   .backers-wrap div {
@@ -98,18 +121,6 @@
   background-color: blue;
   border-radius: 20px;
   border: 3px solid orange;
-}
-
-body {
-  position: relative;
-  height: fit-content;
-  width: 100vw;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: url("./assets/bgDown.png"),
-    radial-gradient(100% 100% at 50% 0%, #132647 26.42%, #070b1a 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .left-nav ul a::after {
@@ -209,3 +220,18 @@ body {
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
 }
+
+/* .menu .item-Parent {
+  overflow: hidden;
+  height: 50px;
+}
+.menu .item {
+  transform-origin: left;
+  transform: rotate(20deg);
+  animation: move 1s linear forwards;
+}
+@keyframes move {
+  to {
+    transform: rotate(0deg);
+  }
+} */

@@ -36,8 +36,8 @@ const Team = () => {
 
   return (
     <div>
-      <div className="home relative h-[82vh] flex">
-        <div className="h-full w-fit mr-[60px]">
+      <div className="home relative h-fit lg:h-[82vh] flex">
+        <div className="h-full w-fit lg:mr-[60px] mx-[30px] lg:mx-0">
           <div className="w-fit z-[100] mt-[150px]">
             <div
               onClick={goToMembers}

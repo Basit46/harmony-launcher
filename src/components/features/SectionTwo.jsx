@@ -8,10 +8,15 @@ const SectionTwo = () => {
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: "0", opacity: 1, transition: { duration: 1 } }}
       exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
-      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
-      className="flex h-[82vh] justify-between pt-[60px]"
+      onAnimationStart={() => {
+        if (window.innerWidth > 1024) {
+          document.body.classList.add("overflow-hidden");
+        } else {
+        }
+      }}
+      className="h-fit lg:h-[82vh] flex flex-col lg:flex-row lg:justify-between pt-[60px]"
     >
-      <div className="w-[70%] 2xl:w-[50%]">
+      <div className="w-[95%] lg:w-[70%] 2xl:w-[50%] order-2 lg:order-1">
         <h1 className="text-[35px] leading-[159.69%] text-white font-Russo">
           Harmony Incubator
         </h1>
@@ -25,7 +30,8 @@ const SectionTwo = () => {
           assistance etc.
         </p>
       </div>
-      <div className="mr-[10px]">
+
+      <div className="lg:mr-[10px] order-1 lg:order-2">
         <img src={cap} alt="cap" />
       </div>
     </motion.div>

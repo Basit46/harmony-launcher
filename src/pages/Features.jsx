@@ -44,7 +44,7 @@ const Features = () => {
 
   return (
     <motion.div className="home relative h-full flex overflow-x-hidden ">
-      <div className="h-fit w-fit fixed top-[40%]">
+      <div className="h-fit w-fit fixed top-[40%] mx-[30px] lg:mx-0">
         <div className="w-fit z-[100]">
           <div
             onClick={goToOne}
@@ -75,7 +75,7 @@ const Features = () => {
 
       <motion.div
         id="features-outlet"
-        className="z-[20] h-[82vh] overflow-hidden ml-[50px]"
+        className="z-[20] h-fit lg:h-[82vh] overflow-hidden ml-[60px] lg:ml-[50px]"
       >
         <Outlet />
       </motion.div>

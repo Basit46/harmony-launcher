@@ -4,7 +4,7 @@ import { useNavigate, Outlet, useLocation } from "react-router-dom";
 import { useNavContext } from "../hooks/Context";
 
 const Home = () => {
-  const { setHomeNav, homeNav, setClone } = useNavContext();
+  const { setHomeNav } = useNavContext();
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -14,22 +14,20 @@ const Home = () => {
   );
 
   const goToHero = async () => {
-    // setClone(homeNav);
     setHomeNav(1);
     await setOnHeroSection(true);
     navigate("/");
   };
 
   const goToAbout = async () => {
-    // setClone(homeNav);
     setHomeNav(2);
     await setOnHeroSection(false);
     navigate("/about");
   };
 
   return (
-    <div className="home relative h-[82vh] flex">
-      <div className="h-full w-fit mr-[60px]">
+    <div className="home relative h-fit lg:h-[82vh] flex">
+      <div className="h-full w-fit lg:mr-[60px] mx-[20px] lg:mx-0 ">
         <div className="w-fit z-[100] mt-[150px]">
           <div
             onClick={goToHero}
@@ -46,7 +44,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="z-[20] h-[82vh]">
+      <div className="z-[20] h-fit lg:h-[82vh]">
         <Outlet />
       </div>
 

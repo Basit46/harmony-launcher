@@ -6,6 +6,8 @@ const navContext = createContext();
 const Context = ({ children }) => {
   const [homeNav, setHomeNav] = useState(1);
   const [clone, setClone] = useState(1);
+  const [openWalletModal, setOpenWalletModal] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const location = useLocation();
 
@@ -18,10 +20,21 @@ const Context = ({ children }) => {
       setHomeNav(1);
     }
     console.log(homeNav, clone);
-  }, [location]);
+  }, [location, clone, homeNav]);
 
   return (
-    <navContext.Provider value={{ homeNav, setHomeNav, clone, setClone }}>
+    <navContext.Provider
+      value={{
+        homeNav,
+        setHomeNav,
+        clone,
+        setClone,
+        openWalletModal,
+        setOpenWalletModal,
+        openMenu,
+        setOpenMenu,
+      }}
+    >
       {children}
     </navContext.Provider>
   );

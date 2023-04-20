@@ -1,11 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { useNavContext } from "../hooks/Context";
 
 const LeftNav = () => {
-  const { setClone } = useNavContext();
   return (
-    <div className="left-nav fixed top-[18vh] w-[20vw] left-0 h-[82vh] p-5">
+    <div className="left-nav hidden lg:block fixed top-[18vh] w-[20vw] left-0 h-[82vh] p-5">
       <div className="flex flex-col items-center">
         <ul className="w-fit h-full flex flex-col space-y-[40px]">
           <NavLink to="/">Home</NavLink>

@@ -11,12 +11,17 @@ const TeamMembers = () => {
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: "0", opacity: 1, transition: { duration: 1 } }}
       exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
-      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
+      onAnimationStart={() => {
+        if (window.innerWidth > 1024) {
+          document.body.classList.add("overflow-hidden");
+        } else {
+        }
+      }}
     >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo mb-[48px]">
         Our Advisors
       </h1>
-      <div className="flex flex-wrap gap-x-[30px] gap-y-[60px]">
+      <div className="flex flex-wrap justify-center lg:justify-start gap-x-0 md:gap-x-[30px] gap-y-[60px]">
         <div className="offerBox relative w-[262px] h-[228px] backdrop-blur-[15px] rounded-[20px] flex flex-col justify-center items-center">
           <img
             className="absolute w-[141px] h-[141px] top-[-50%] translate-y-[50%] left-[50%] translate-x-[-50%]"

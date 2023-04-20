@@ -7,19 +7,24 @@ const Questions = () => {
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: "0", opacity: 1, transition: { duration: 1 } }}
       exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
-      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
-      className="questions"
+      onAnimationStart={() => {
+        if (window.innerWidth > 1024) {
+          document.body.classList.add("overflow-hidden");
+        } else {
+        }
+      }}
+      className="questions min-h-[82vh] lg:h-[82vh]"
     >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo mb-[48px]">
         Have Any Questions?
       </h1>
-      <div className="offerBox w-[790px] h-[274px] backdrop-blur-[7.5px] rounded-[20px] p-[20px]">
+      <div className="offerBox w-[90%] lg:w-[790px] h-fit lg:h-[274px] backdrop-blur-[7.5px] rounded-[20px] p-[20px]">
         <p className="text-[26px] leading-[31px] text-[#00FFB2]">
           Feel Free To Reach Out!
         </p>
-        <div className="w-full flex justify-between mt-[31px] mb-[30px]">
+        <div className="w-full flex flex-col lg:flex-row justify-between mt-[31px] mb-[30px]">
           <input
-            className="w-[357px] placeholder:text-[18px] placeholder:text-white"
+            className="w-[357px] placeholder:text-[18px] placeholder:text-white mb-[20px] lg:mb-0"
             placeholder="First name"
             type="text"
           />

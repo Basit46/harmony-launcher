@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import LeftNav from "./components/LeftNav";
 import TopNav from "./components/TopNav";
 import circle from "./assets/circle.png";
@@ -30,19 +30,16 @@ import Projects from "./components/ido/Projects";
 import ArticleDetails from "./components/insights/ArticleDetails";
 import ConnectWalletModal from "./components/ConnectWalletModal";
 import { AnimatePresence } from "framer-motion";
+import Menu from "./pages/Menu";
+import { useNavContext } from "./hooks/Context";
 
 const App = () => {
-  const [openWalletModal, setOpenWalletModal] = useState(false);
+  const { openWalletModal, setOpenWalletModal } = useNavContext();
   const location = useLocation();
 
   return (
     <>
-      <div className="relative lg:hidden h-screen w-screen overflow-y-scroll grid place-items-center">
-        <h1 className="text-[2.5rem] text-white text-center">
-          SCREEN SIZE NOT AVAILABLE CURRENTLY
-        </h1>
-      </div>
-      <div className="hidden lg:block relative main h-fit w-full text-white font-Qanelas ">
+      <div className="main relative h-fit w-full text-white font-Qanelas ">
         <img
           className="fixed top-[0px] right-0 w-[170px] h-[170px] z-[150]"
           src={circle}
@@ -54,8 +51,9 @@ const App = () => {
           openWalletModal={openWalletModal}
           setOpenWalletModal={setOpenWalletModal}
         />
+        <Menu />
 
-        <div className="ml-[20vw] h-fit">
+        <div className="ml-0 lg:ml-[20vw] h-fit">
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />}>

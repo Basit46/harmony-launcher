@@ -8,7 +8,12 @@ const Plans = () => {
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: "0", opacity: 1, transition: { duration: 1 } }}
       exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
-      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
+      onAnimationStart={() => {
+        if (window.innerWidth > 1024) {
+          document.body.classList.add("overflow-hidden");
+        } else {
+        }
+      }}
       className="h-[82vh]"
     >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo">

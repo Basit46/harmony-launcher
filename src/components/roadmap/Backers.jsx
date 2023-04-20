@@ -21,13 +21,18 @@ const Backers = () => {
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: "0", opacity: 1, transition: { duration: 1 } }}
       exit={{ y: "-100%", opacity: 0, transition: { duration: 1 } }}
-      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
+      onAnimationStart={() => {
+        if (window.innerWidth > 1024) {
+          document.body.classList.add("overflow-hidden");
+        } else {
+        }
+      }}
       className="min-h-[82vh]"
     >
       <h1 className="text-[64px] leading-[77px] text-white font-Russo">
         Our Backers
       </h1>
-      <div className="backers-wrap flex flex-wrap gap-[10px] pb-[10px]">
+      <div className="backers-wrap flex flex-wrap justify-center lg:justify-start gap-[10px] pb-[10px] mt-[20px] lg:mt-0">
         <div>
           <img src={img1} alt="backer logo" />
         </div>
