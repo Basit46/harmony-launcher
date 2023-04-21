@@ -54,7 +54,7 @@ body {
     background: linear-gradient(93.79deg, #6a52fb 3.11%, #9b8aff 96.17%);
   }
   table {
-    @apply w-full border-collapse;
+    @apply min-w-[800px] border-collapse;
   }
   thead tr {
     background: #1a2843;
