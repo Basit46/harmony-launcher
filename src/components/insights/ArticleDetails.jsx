@@ -39,7 +39,7 @@ const ArticleDetails = () => {
         </div>
       </div>
 
-      <div className="mt-[50px] h-fit w-[98%]">
+      <div className="mt-[50px] h-fit w-[98%] p-[10px] vsm:p-0">
         <div className="flex items-center w-[90vw] md:w-[400px] h-[56px] rounded-[10px] p-[10px] backdrop-blur-[10px] bg-[#00000033]">
           <input
             className="bg-transparent p-[4px] w-full placeholder:text-[#868C98]"
@@ -48,25 +48,25 @@ const ArticleDetails = () => {
           />
           <FaSearch className="text-[#868C98]" />
         </div>
-        <div className="w-full p-[10px]">
+        <div className="w-full p-[10px] z-[900]">
           <h1 className="mt-[25px] mb-[28px] font-Russo text-[20px] leading-[24px] ">
             Recent Posts
           </h1>
-          <div className="w-full flex items-center mb-[36px]">
+          <div className="w-full flex flex-col vsm:flex-row vsm:items-center mb-[36px]">
             <img className="mr-[16px]" src={img} alt="featured" />
             <p className="font-medium text-[20px] leading-[24px]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
           </div>
-          <div className="w-full flex items-center mb-[36px]">
+          <div className="w-full flex flex-col vsm:flex-row vsm:items-center mb-[36px]">
             <img className="mr-[16px]" src={img} alt="featured" />
             <p className="font-medium text-[20px] leading-[24px]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
           </div>
-          <div className="w-full flex items-center mb-[36px]">
+          <div className="w-full flex flex-col vsm:flex-row vsm:items-center mb-[36px]">
             <img className="mr-[16px]" src={img} alt="featured" />
             <p className="font-medium text-[20px] leading-[24px]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
