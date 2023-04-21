@@ -99,7 +99,6 @@ body {
     @apply ml-[5px] text-[17px] leading-[21px] text-white;
   }
   .market .line {
-    width: 496px;
     height: 7px;
     background: linear-gradient(
       90deg,

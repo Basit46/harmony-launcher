@@ -40,7 +40,7 @@ const ArticleDetails = () => {
       </div>
 
       <div className="mt-[50px] h-fit w-[98%]">
-        <div className="flex items-center w-[400px] h-[56px] rounded-[10px] p-[10px] backdrop-blur-[10px] bg-[#00000033]">
+        <div className="flex items-center w-[90vw] md:w-[400px] h-[56px] rounded-[10px] p-[10px] backdrop-blur-[10px] bg-[#00000033]">
           <input
             className="bg-transparent p-[4px] w-full placeholder:text-[#868C98]"
             type="text"

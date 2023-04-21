@@ -16,11 +16,11 @@ const Market = () => {
     >
       <div className="flex flex-col items-center mt-[50px]">
         <img className="mb-[47px]" src={loadIcon} alt="loading" />
-        <div className="line"></div>
-        <h1 className="font-Russo text-[75px] leading-[90px] my-[25px]">
+        <div className="line w-[90vw] vsm:w-[496px]"></div>
+        <h1 className="font-Russo text-[50px] vsm:text-[75px] leading-[90px] my-[25px]">
           Coming Soon
         </h1>
-        <div className="line"></div>
+        <div className="line w-[90vw] vsm:w-[496px]"></div>
       </div>
     </motion.div>
   );
