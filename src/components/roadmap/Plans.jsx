@@ -14,7 +14,7 @@ const Plans = () => {
         } else {
         }
       }}
-      className="h-[82vh] w-full"
+      className="h-[82vh] w-[80vw]"
     >
       <h1 className="text-[50px] vsm:text-[64px] leading-[1.2] vsm:leading-[77px] text-white font-Russo">
         Roadmap
@@ -23,7 +23,7 @@ const Plans = () => {
         CURRENT PLANS
       </h2>
 
-      <div className="w-[93%] overflow-x-auto ">
+      <div className="w-[95%] overflow-x-auto">
         <div className="w-fit pt-[10px]">
           <div className="map relative min-w-[900px] px-[30px] pt-[40px] pb-[48px]">
             <div className="absolute top-[10px] left-[7%] h-fit w-fit">
