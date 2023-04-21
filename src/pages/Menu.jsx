@@ -19,8 +19,8 @@ const Menu = () => {
   return (
     <div
       className={`${
-        openMenu ? "right-[0]" : "right-[-100%]"
-      } menu absolute top-0 h-full w-full z-[501] duration-[1s]`}
+        openMenu ? "left-0" : "left-[100%]"
+      } menu fixed top-0 h-full w-full z-[501] duration-[1s]`}
     >
       <FaTimes
         onClick={closeMenu}
