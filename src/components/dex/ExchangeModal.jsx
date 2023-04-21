@@ -15,9 +15,9 @@ const ExchangeModal = ({ show, setShow }) => {
     <div
       className={`${
         !show && "hidden"
-      } modal z-[50] left-0 top-0 fixed bg-black vsm:bg-black/40 h-full w-full grid place-items-center`}
+      } modal z-[50] fixed left-0 top-0 bg-black vsm:bg-black/40 h-full w-full grid place-items-center`}
     >
-      <div className="w-[90vw] vsm:w-[420px] h-[80vh] rounded-[30px] bg-[#0b1425]">
+      <div className="sticky top-[50%] translate-y-[-50%] w-[90vw] vsm:w-[420px] h-[80vh] rounded-[30px] bg-[#0b1425]">
         <div className="flex items-center justify-between px-[25px] py-[20px] border-b border-solid border-[rgba(255,255,255,0.15)]">
           <p className="font-semibold text-xl leading-6 text-white">
             Select a token

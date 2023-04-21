@@ -44,7 +44,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="z-[20] h-fit lg:h-[82vh]">
+      <div className="z-[20] h-fit lg:h-[82vh] w-full">
         <Outlet />
       </div>
 

@@ -19,24 +19,26 @@ const Hero = () => {
         } else {
         }
       }}
-      className="min-h-[82vh] lg:h-[82vh]"
+      className="relative min-h-[82vh] lg:h-[82vh] w-full"
     >
-      <h1 className="font-Russo text-[50px] vsm:text-[64px] leading-[1.2] vsm:leading-[77px] text-white">
-        World’s First <span className="text-[#00FFB2]">IDO + IGO</span>{" "}
-        Incubator & Launchpad
-      </h1>
-      <h2 className="font-normal text-[22px] vsm:text-[32px] leading-[38px] text-[#00FFB2] uppercase mt-[19px] mb-[23px]">
-        Built On Harmony Blockchain
-      </h2>
-      <p className="font-medium text-[19px] leading-[159.69%] text-white">
-        The secure and hassle-free way to launch your projects on the Harmony
-        Network.
-      </p>
-      <button className="px-5 py-[15px] rounded-[30px] font-medium text-xl leading-6 text-white mt-[32px] mb-[20px] md:mb-0">
-        Apple For IOD
-      </button>
+      <div className="w-auto 2xl:w-[50vw] ">
+        <h1 className="font-Russo text-[50px] vsm:text-[64px] leading-[1.2] vsm:leading-[77px] text-white">
+          World’s First <span className="text-[#00FFB2]">IDO + IGO</span>{" "}
+          Incubator & Launchpad
+        </h1>
+        <h2 className="font-normal text-[22px] vsm:text-[32px] leading-[38px] text-[#00FFB2] uppercase mt-[19px] mb-[23px]">
+          Built On Harmony Blockchain
+        </h2>
+        <p className="font-medium text-[19px] leading-[159.69%] text-white">
+          The secure and hassle-free way to launch your projects on the Harmony
+          Network.
+        </p>
+        <button className="px-5 py-[15px] rounded-[30px] font-medium text-xl leading-6 text-white mt-[32px] mb-[20px] md:mb-0">
+          Apple For IOD
+        </button>
+      </div>
       <img
-        className="fixed h-[80vh] right-0 vsm:right-[90px] bottom-0 z-[-1] opacity-20 vsm:opacity-50 lg:opacity-100"
+        className="fixed h-[80vh] right-0 vsm:right-[90px] 2xl:right-[190px] bottom-0 z-[-1] opacity-20 vsm:opacity-50 lg:opacity-100"
         src={Rocket}
         alt="rocket"
       />
