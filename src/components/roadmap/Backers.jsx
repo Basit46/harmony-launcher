@@ -29,7 +29,7 @@ const Backers = () => {
       }}
       className="min-h-[82vh]"
     >
-      <h1 className="text-[64px] leading-[77px] text-white font-Russo">
+      <h1 className="text-[48px] vsm:text-[64px] leading-[1.2] vsm:leading-[77px] text-white font-Russo">
         Our Backers
       </h1>
       <div className="backers-wrap flex flex-wrap justify-center lg:justify-start gap-[10px] pb-[10px] mt-[20px] lg:mt-0">

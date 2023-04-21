@@ -14,10 +14,10 @@ const SectionThree = () => {
         } else {
         }
       }}
-      className="min-h-[82vh] flex flex-col lg:flex-row lg:justify-between lg:pt-[60px]"
+      className="min-h-[82vh] flex flex-col lg:flex-row lg:justify-between lg:pt-[60px] pb-[20px] vsm:pb-0"
     >
       <div className="w-[95%] lg:w-[70%] 2xl:w-[50%] order-2 lg:order-1">
-        <h1 className="text-[35px] leading-[159.69%] text-white font-Russo">
+        <h1 className="text-[35px] leading-[1.2] vsm:leading-[159.69%] text-white font-Russo mb-[20px] vsm:mb-0">
           Harmony AMM DEX
         </h1>
         <p className="font-medium text-[19px] leading-[159.69%] text-white mt-[1px]">
@@ -28,7 +28,7 @@ const SectionThree = () => {
         </p>
       </div>
 
-      <div className="mr-[10px] order-1 lg:order-2">
+      <div className="mr-[10px] order-1 lg:order-2 pb-[30px] vsm:pb-0">
         <img src={goggle} alt="cap" />
       </div>
     </motion.div>

@@ -15,9 +15,9 @@ const Advisors = () => {
         } else {
         }
       }}
-      className="h-fit lg:h-[82vh]"
+      className="min-h-[82vh] lg:h-[82vh]"
     >
-      <h1 className="text-[64px] leading-[77px] text-white font-Russo mb-[48px]">
+      <h1 className="text-[44px] vsm:text-[64px] leading-[1.2] vsm:leading-[77px] text-white font-Russo mb-[70px] vsm:mb-[48px]">
         Our Advisors
       </h1>
       <div className="flex flex-wrap justify-center lg:justify-start gap-x-[30px] gap-y-[60px]">

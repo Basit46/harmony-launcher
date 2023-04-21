@@ -15,10 +15,10 @@ const Footer = () => {
         } else {
         }
       }}
-      className="min-h-[82vh] lg:h-[82vh] flex flex-col lg:flex-row justify-between"
+      className="min-h-[82vh] lg:h-[82vh] flex flex-col lg:flex-row vsm:justify-between"
     >
-      <div className="w-[90%] lg:w-[60%]">
-        <h1 className="font-normal text-[35px] leading-[140%] text-white font-Russo">
+      <div className="w-[95%] vsm:w-[90%] lg:w-[60%] mb-[40px] vsm:mb-0">
+        <h1 className="font-normal text-[25px] vsm:text-[35px] leading-[140%] text-white font-Russo">
           The secure and hassle-free way to launch your projects on the Harmony
           Network.
         </h1>
@@ -31,7 +31,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="flex flex-row lg:flex-col justify-start lg:justify-center mr-0 lg:mr-[40px] flex-wrap gap-x-[20px] lg:gap-x-0 ">
+      <div className="flex flex-col vsm:flex-row lg:flex-col justify-start lg:justify-center mr-0 lg:mr-[40px] flex-wrap gap-y-[10px] vsm:gap-y-0 gap-x-[20px] lg:gap-x-0 ">
         <Link
           to="/privacy-policy"
           className="font-bold text-xl leading-[25px] underline text-white"

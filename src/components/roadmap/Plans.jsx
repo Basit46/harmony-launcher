@@ -16,10 +16,10 @@ const Plans = () => {
       }}
       className="h-[82vh]"
     >
-      <h1 className="text-[64px] leading-[77px] text-white font-Russo">
+      <h1 className="text-[50px] vsm:text-[64px] leading-[1.2] vsm:leading-[77px] text-white font-Russo">
         Roadmap
       </h1>
-      <h2 className="uppercase font-Qanelas text-[32px] leading-[38px] text-[#00FFB2] mt-[18px] mb-[40px]">
+      <h2 className="uppercase font-Qanelas text-[32px] leading-[38px] text-[#00FFB2] mt-[5px] vsm:mt-[18px] mb-[40px]">
         CURRENT PLANS
       </h2>
       <div className="map relative pt-[30px] pb-[48px]">

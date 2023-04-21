@@ -18,8 +18,8 @@ const TeamMembers = () => {
         }
       }}
     >
-      <h1 className="text-[64px] leading-[77px] text-white font-Russo mb-[48px]">
-        Our Advisors
+      <h1 className="text-[50px] vsm:text-[64px] leading-[1.2] vsm:leading-[77px] text-white font-Russo mb-[70px] vsm:mb-[48px]">
+        Our Team
       </h1>
       <div className="flex flex-wrap justify-center lg:justify-start gap-x-0 md:gap-x-[30px] gap-y-[60px]">
         <div className="offerBox relative w-[262px] h-[228px] backdrop-blur-[15px] rounded-[20px] flex flex-col justify-center items-center">
