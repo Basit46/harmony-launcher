@@ -23,7 +23,8 @@ const Dex = () => {
         transition: { duration: 0.5 },
       }}
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
-      className="dex"
+      onAnimationStart={() => document.body.classList.remove("overflow-hidden")}
+      className="dex h-fit"
     >
       <ExchangeModal show={show} setShow={setShow} />
 
