@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
       initial={{ x: "100%" }}
       animate={{ x: "0%", transition: { duration: 1 } }}
       exit={{ x: "100%", transition: { duration: 1 } }}
-      className="h-[1120vh]"
+      className="min-h-[1120vh]"
     >
       <div className="flex">
         <div className="mr-[30px]">
@@ -29,18 +29,18 @@ const PrivacyPolicy = () => {
             className="w-[40px] h-[40px]"
           />
         </div>
-        <div className="h-[400px] w-[90%]">
+        <div className="min-h-[400px] w-[90%]">
           <div>
-            <h1 className="font-Russo text-[64px] leading-[77px] text-white">
+            <h1 className="font-Russo text-[50px] vsm:text-[64px] leading-none vsm:leading-[77px] text-white">
               Harmony Launcher Privacy Policy
             </h1>
-            <p className="font-medium text-[19px] leading-[159.69%] mt-[28px] mb-[20px]">
+            <p className="font-medium text-[16px] vsm:text-[19px] leading-[159.69%] mt-[28px] mb-[20px]">
               Thank you for visiting ("Website"). The Website is owned and
               operated by harmonylauncher Inc, a company with limited liability
               incorporated in the Seychelles, and its affiliates ("Company",
               "we", "our", or "us").
             </p>
-            <p className="font-medium text-[19px] leading-[159.69%]">
+            <p className="font-medium text-[16px] vsm:text-[19px] leading-[159.69%]">
               This Privacy Policy ("Privacy Policy") together with our Terms of
               Services ("Terms of Services") sets out the basis on which any
               Personal Data we collect from the User. The “User" is an
