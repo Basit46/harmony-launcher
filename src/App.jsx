@@ -53,7 +53,7 @@ const App = () => {
         />
         <Menu />
 
-        <div className="ml-0 lg:ml-[20vw] h-fit">
+        <div className="ml-0 lg:ml-[20vw] min-h-[82vh]">
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />}>
