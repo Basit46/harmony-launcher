@@ -5,7 +5,7 @@ import sticker from "../../assets/sticker.png";
 
 const Main = () => {
   return (
-    <div className="ido-main h-full w-full flex flex-col lg:flex-row lg:justify-between pb-[40px] vsm:pb-0">
+    <div className="ido-main h-full w-full flex flex-col lg:flex-row lg:justify-between 2xl:justify-start 2xl:gap-x-[300px] pb-[40px] vsm:pb-0">
       <div>
         <h1 className="text-3xl leading-9 text-white font-Russo mb-[20px]">
           Live

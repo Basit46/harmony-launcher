@@ -17,7 +17,7 @@ const About = () => {
       // onAnimationComplete={() =>
       //   document.body.classList.remove("overflow-hidden")
       // }
-      className="min-h-[82vh] lg:h-[82vh] flex flex-col md:flex-row md:justify-between"
+      className="min-h-[82vh] lg:h-[82vh] w-full flex flex-col md:flex-row md:justify-between"
     >
       <div className="w-full md:w-[50%] order-2 md:order-1 ">
         <h1 className="text-[64px] leading-[77px] text-white font-Russo">
@@ -35,7 +35,7 @@ const About = () => {
         </p>
       </div>
 
-      <div className="w-[60vw] md:h-auto md:mr-[40px] order-1 md:order-2">
+      <div className="w-[60vw] 2xl:w-fit md:h-auto md:mr-[40px] order-1 md:order-2">
         <img src={Earth} alt="Earth" />
       </div>
     </motion.div>
