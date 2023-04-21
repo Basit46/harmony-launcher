@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
 import wallet from "../assets/Wallet icon.svg";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useNavContext } from "../hooks/Context";
 
 const TopNav = ({ setOpenWalletModal }) => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const { setOpenMenu } = useNavContext();
   const [showConnectBtn, setShowConnectBtn] = useState(false);
@@ -33,9 +34,13 @@ const TopNav = ({ setOpenWalletModal }) => {
         : "HOME"
     }`;
   }, [location]);
+
+  const goToHome = () => {
+    navigate("/");
+  };
   return (
-    <div className="top-nav z-[500] sticky top-0 left-0 h-[18vh] w-screen flex justify-between items-center px-[50px] py-[10px]">
-      <img src={logo} alt="logo" className="ml-[-30px]" />
+    <div className="top-nav z-[500] sticky top-0 left-0 h-[18vh] w-screen flex justify-between items-center px-[20px] vsm:px-[50px] py-[10px]">
+      <img src={logo} alt="logo" className="ml-[-30px]" onClick={goToHome} />
 
       <ul className="hidden lg:block">
         <NavLink to="/ido">IDO</NavLink>
