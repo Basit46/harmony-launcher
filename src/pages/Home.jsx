@@ -49,7 +49,7 @@ const Home = () => {
       </div>
 
       <img
-        className="z-[2] absolute right-0 bottom-0"
+        className="z-[-1] absolute right-0 bottom-0"
         src={Clouds}
         draggable={false}
         alt="clouds"

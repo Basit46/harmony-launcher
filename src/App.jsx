@@ -42,12 +42,12 @@ const App = () => {
   return (
     <>
       <div className="main relative h-fit w-full text-white font-Qanelas ">
+        <div className="cover fixed top-0 left-0 w-full h-full z-[-1]"></div>
         <img
-          className="fixed top-[0px] right-0 w-[170px] h-[170px] z-[150]"
+          className="fixed top-[0px] right-0 w-[170px] h-[170px] z-[-1]"
           src={circle}
           alt="vector"
         />
-        <div className="cover fixed top-0 left-0 w-full h-full z-[-1]"></div>
         <TopNav setOpenWalletModal={setOpenWalletModal} />
         <LeftNav />
         <ConnectWalletModal
