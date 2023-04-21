@@ -29,7 +29,7 @@ const Dex = () => {
       <ExchangeModal show={show} setShow={setShow} />
 
       <div className="flex flex-wrap">
-        <div className="w-[1025px] h-[596px] mb-[40px] mr-[40px] rounded-[20px] bg-[#111e37] px-[52px] py-[28px] flex flex-col justify-between">
+        <div className="w-[100%] md:w-[1025px] h-fit vsm:h-[596px] mb-[40px] mr-[40px] rounded-[20px] bg-[#111e37] px-[52px] py-[28px] flex flex-col justify-between">
           <div className="">
             <div className="w-full flex space-x-[8px] items-center">
               <div className="flex h-fit">
@@ -44,7 +44,7 @@ const Dex = () => {
               </h1>
             </div>
 
-            <div className="flex w-full items-center justify-between mt-[15px]">
+            <div className="flex flex-col md:flex-row w-full md:items-center justify-between mt-[15px]">
               <h1 className="font-medium text-[32px] leading-[39px] text-white">
                 1654.29 USDT
               </h1>
@@ -69,7 +69,7 @@ const Dex = () => {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative mt-[50px] vsm:mt-0">
             <img src={ethChart} alt="chart of ethereum" />
             <div className="chart-label absolute bottom-[20px] left-0 w-full bg-red flex justify-evenly">
               <p>Feb 23</p>
