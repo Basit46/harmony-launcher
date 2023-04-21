@@ -14,16 +14,16 @@ const SectionOne = () => {
         } else {
         }
       }}
-      className="min-h-[82vh] lg:h-[82vh] w-full flex flex-col lg:flex-row lg:justify-between"
+      className="min-h-[82vh] lg:h-[82vh] w-full flex flex-col lg:flex-row lg:justify-between pb-[40px] vsm:pb-0"
     >
       <div className="w-full lg:w-[75%] 2xl:w-[50%] order-2 lg:order-1">
-        <h1 className="font-Russo text-[50px] md:text-[64px] leading-[77px] text-white">
+        <h1 className="font-Russo text-[44px] vsm:text-[50px] md:text-[64px] leading-[1.2] vsm:leading-[77px] text-white">
           Our Technologies
         </h1>
         <h2 className="font-normal text-[32px] leading-[38px] text-[#00FFB2] mt-[18px] mb-[35px]">
           FEATURES
         </h2>
-        <p className="text-[35px] leading-[159.69%] text-white font-Russo mb-[1px]">
+        <p className="text-[35px] leading-none vsm:leading-[159.69%] text-white font-Russo mb-[10px] vsm:mb-[1px]">
           IDO + IGO LaunchPad
         </p>
         <p className="font-medium text-[19px] leading-[159.69%] text-white pr-[20px] lg:pr-0">

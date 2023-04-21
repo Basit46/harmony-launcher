@@ -23,7 +23,7 @@ const UseCases = () => {
       // }
       className="h-full w-full overflow-x-hidden"
     >
-      <h1 className="font-Russo text-[50px] md:text-[64px] leading-[77px] text-white text-center md:text-left">
+      <h1 className="font-Russo text-[50px] md:text-[64px] leading-[1.2] vsm:leading-[77px] text-white text-center md:text-left">
         Harmony Launcher's Aim
       </h1>
       <p className="font-normal text-[32px] leading-[38px] text-[#00FFB2] uppercase mt-[10px] mb-[32px] text-center md:text-left">

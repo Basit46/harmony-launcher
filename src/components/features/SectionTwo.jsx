@@ -14,10 +14,10 @@ const SectionTwo = () => {
         } else {
         }
       }}
-      className="min-h-[82vh] lg:h-[82vh] flex flex-col lg:flex-row lg:justify-between pt-[60px]"
+      className="min-h-[82vh] lg:h-[82vh] flex flex-col lg:flex-row lg:justify-between pt-0 md:pt-[60px] pb-[40px] vsm:pb-0"
     >
       <div className="w-[95%] lg:w-[70%] 2xl:w-[50%] order-2 lg:order-1">
-        <h1 className="text-[35px] leading-[159.69%] text-white font-Russo">
+        <h1 className="text-[35px] leading-[1.2] vsm:leading-[159.69%] text-white font-Russo mb-[20px] vsm:mb-0">
           Harmony Incubator
         </h1>
         <p className="font-medium text-[19px] leading-[159.69%] text-white mt-[1px]">
@@ -31,7 +31,7 @@ const SectionTwo = () => {
         </p>
       </div>
 
-      <div className="lg:mr-[10px] order-1 lg:order-2">
+      <div className="w-[95%] vsm:w-auto lg:mr-[10px] order-1 lg:order-2">
         <img src={cap} alt="cap" />
       </div>
     </motion.div>
