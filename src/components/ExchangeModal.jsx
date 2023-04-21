@@ -1,10 +1,10 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
-import bnb from "../../assets/bnb.png";
-import tether from "../../assets/tether.png";
-import cake from "../../assets/cake.png";
-import btc from "../../assets/btc.png";
-import Token from "./Token";
+import bnb from "../assets/bnb.png";
+import tether from "../assets/tether.png";
+import cake from "../assets/cake.png";
+import btc from "../assets/btc.png";
+import Token from "./dex/Token";
 
 const ExchangeModal = ({ show, setShow }) => {
   const closeModal = () => {
@@ -15,7 +15,7 @@ const ExchangeModal = ({ show, setShow }) => {
     <div
       className={`${
         !show && "hidden"
-      } modal z-[50] fixed left-0 top-0 bg-black vsm:bg-black/40 h-full w-full grid place-items-center`}
+      } modal z-[600] fixed left-0 top-0 bg-black/70 vsm:bg-black/70 h-full w-full grid place-items-center`}
     >
       <div className="w-[90vw] vsm:w-[420px] h-[80vh] 2xl:h-fit rounded-[30px] bg-[#0b1425]">
         <div className="flex items-center justify-between px-[25px] py-[20px] border-b border-solid border-[rgba(255,255,255,0.15)]">

@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import ethLogo from "../assets/eth.png";
 import tetherLogo from "../assets/tether.png";
 import ethChart from "../assets/ethChart.svg";
 import swap from "../assets/swapIcon.png";
 import { AiFillCaretDown } from "react-icons/ai";
-import ExchangeModal from "../components/dex/ExchangeModal";
 import { motion } from "framer-motion";
+import { useNavContext } from "../hooks/Context";
 
 const Dex = () => {
-  const [show, setShow] = useState(false);
+  const { setShow } = useNavContext();
 
   const showModal = () => {
     setShow(true);
@@ -26,8 +26,6 @@ const Dex = () => {
       onAnimationStart={() => document.body.classList.remove("overflow-hidden")}
       className="dex h-fit"
     >
-      <ExchangeModal show={show} setShow={setShow} />
-
       <div className="flex flex-wrap">
         <div className="w-[100%] md:w-[1025px] h-fit vsm:h-[596px] mb-[40px] mr-[40px] rounded-[20px] bg-[#111e37] px-[52px] py-[28px] flex flex-col justify-between">
           <div className="">

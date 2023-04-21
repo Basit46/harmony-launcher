@@ -6,6 +6,7 @@ const navContext = createContext();
 const Context = ({ children }) => {
   const [homeNav, setHomeNav] = useState(1);
   const [clone, setClone] = useState(1);
+  const [show, setShow] = useState(false);
   const [openWalletModal, setOpenWalletModal] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -29,6 +30,8 @@ const Context = ({ children }) => {
         setHomeNav,
         clone,
         setClone,
+        show,
+        setShow,
         openWalletModal,
         setOpenWalletModal,
         openMenu,

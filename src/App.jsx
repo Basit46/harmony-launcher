@@ -32,9 +32,11 @@ import ConnectWalletModal from "./components/ConnectWalletModal";
 import { AnimatePresence } from "framer-motion";
 import Menu from "./pages/Menu";
 import { useNavContext } from "./hooks/Context";
+import ExchangeModal from "./components/ExchangeModal";
 
 const App = () => {
-  const { openWalletModal, setOpenWalletModal } = useNavContext();
+  const { openWalletModal, setOpenWalletModal, show, setShow } =
+    useNavContext();
   const location = useLocation();
 
   return (
@@ -52,6 +54,7 @@ const App = () => {
           openWalletModal={openWalletModal}
           setOpenWalletModal={setOpenWalletModal}
         />
+        <ExchangeModal show={show} setShow={setShow} />
         <Menu />
 
         <div className="ml-0 lg:ml-[20vw] min-h-[82vh]">
