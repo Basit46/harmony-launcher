@@ -5,12 +5,12 @@ import sticker from "../../assets/sticker.png";
 
 const Main = () => {
   return (
-    <div className="ido-main w-full flex flex-col lg:flex-row lg:justify-between">
+    <div className="ido-main h-full w-full flex flex-col lg:flex-row lg:justify-between pb-[40px] vsm:pb-0">
       <div>
         <h1 className="text-3xl leading-9 text-white font-Russo mb-[20px]">
           Live
         </h1>
-        <div className="relative w-fit h-fit">
+        <div className="relative w-[95%] vsm:w-fit h-fit">
           <img className="w-[415px] h-[396px]" src={img} alt="main" />
           <img
             src={sticker}
@@ -63,7 +63,7 @@ const Main = () => {
           Upcoming
         </h1>
 
-        <div className="blur-box2 w-[373px] h-fit">
+        <div className="blur-box2 w-[70vw] vsm:w-[373px] h-fit">
           <div className="relative w-full h-fit">
             <img
               className="w-full object-top object-cover h-[216px]"

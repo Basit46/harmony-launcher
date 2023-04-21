@@ -25,7 +25,7 @@ const Ido = () => {
         transition: { duration: 0.5, delay: 0.4 },
       }}
       exit={{ opacity: 0 }}
-      className="home relative h-fit lg:h-[82vh] w-full flex"
+      className="home relative min-h-[82vh] lg:h-[82vh] w-full flex"
     >
       <div className="h-full w-fit lg:mr-[60px] mx-[30px] lg:mx-0">
         <div className="w-fit z-[100] mt-[150px]">
