@@ -11,14 +11,18 @@ body {
   width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
+  /* background: url("./assets/bgDown.png"),
+    radial-gradient(100% 100% at 50% 0%, #132647 26.42%, #070b1a 100%);
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.menu,
+.cover {
   background: url("./assets/bgDown.png"),
     radial-gradient(100% 100% at 50% 0%, #132647 26.42%, #070b1a 100%);
   background-repeat: no-repeat;
   background-size: cover;
-}
-.menu {
-  background: url("./assets/bgDown.png"),
-    radial-gradient(100% 100% at 50% 0%, #132647 26.42%, #070b1a 100%);
 }
 
 @layer components {

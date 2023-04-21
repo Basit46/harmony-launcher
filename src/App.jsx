@@ -45,6 +45,7 @@ const App = () => {
           src={circle}
           alt="vector"
         />
+        <div className="cover fixed top-0 left-0 w-full h-full"></div>
         <TopNav setOpenWalletModal={setOpenWalletModal} />
         <LeftNav />
         <ConnectWalletModal
