@@ -7,6 +7,9 @@ module.exports = {
         Qanelas: ["Qanelas Soft", "sans-serif"],
         Russo: ["Russo One", "sans-serif"],
       },
+      screens: {
+        vsm: "400px",
+      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],

@@ -36,7 +36,7 @@ body {
     @apply;
   } */
   .menu ul a {
-    @apply block text-[2rem] mb-[40px] font-Russo hover:text-[#816dfd] hover:duration-300;
+    @apply block text-[1.3rem] vsm:text-[2rem] mb-[40px] font-Russo hover:text-[#816dfd] hover:duration-300;
   }
 
   .backers-wrap div {
