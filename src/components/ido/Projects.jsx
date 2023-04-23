@@ -14,7 +14,7 @@ const Projects = () => {
         <FaSearch />
       </div>
 
-      <ul className="flex items-center space-x-[40px] mt-[35px]">
+      <ul className="flex flex-wrap vsm:flex-nowrap items-center space-x-[40px] mt-[35px]">
         <li className="active">ALL</li>
         <li>Ethereum</li>
         <li>BNB Chain</li>
