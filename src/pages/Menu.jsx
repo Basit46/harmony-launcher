@@ -20,7 +20,7 @@ const Menu = () => {
     <div
       className={`${
         openMenu ? "left-0" : "left-[100%]"
-      } menu fixed top-0 h-full w-full z-[501] duration-[1s]`}
+      } menu fixed top-0 h-full w-full z-[501] duration-[7000ms] vsm:duration-[1s]`}
     >
       <FaTimes
         onClick={closeMenu}
