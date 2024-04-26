@@ -38,24 +38,24 @@ const Roadmap = () => {
     <div className="home relative h-fit flex">
       <div className="h-fit w-fit fixed top-[40%] mx-[30px] lg:mx-0">
         <div className="w-fit z-[100]">
-          <div
+          <button
             onClick={goToPlans}
-            className={`bg-white rounded-[47px] w-[3px] h-[20px] cursor-pointer ${
+            className={`bg-white rounded-[47px] block w-[3px] h-[20px] cursor-pointer ${
               currentLoc === 1 && "current-loc"
             }`}
-          ></div>
-          <div
+          />
+          <button
             onClick={goToBackers}
-            className={`mt-[6px] bg-white rounded-[47px] w-[3px] h-[20px] cursor-pointer ${
+            className={`mt-[6px] bg-white rounded-[47px] block w-[3px] h-[20px] cursor-pointer ${
               currentLoc === 2 && "current-loc"
             }`}
-          ></div>
-          <div
+          />
+          <button
             onClick={goToAdvisors}
-            className={`mt-[6px] bg-white rounded-[47px] w-[3px] h-[20px] cursor-pointer ${
+            className={`mt-[6px] bg-white rounded-[47px] block w-[3px] h-[20px] cursor-pointer ${
               currentLoc === 3 && "current-loc"
             }`}
-          ></div>
+          />
         </div>
       </div>
 

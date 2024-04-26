@@ -15,7 +15,7 @@ const Projects = () => {
       </div>
 
       <ul className="flex flex-wrap vsm:flex-nowrap items-center gap-[10px] vsm:gap-0 vsm:space-x-[40px] mt-[35px]">
-        <li className="active">ALL</li>
+        <li className="active">All</li>
         <li>Ethereum</li>
         <li>BNB Chain</li>
         <li>Polygon</li>

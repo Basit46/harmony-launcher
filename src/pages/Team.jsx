@@ -39,24 +39,24 @@ const Team = () => {
       <div className="home relative min-h-[82vh] lg:h-[82vh] flex">
         <div className="h-full w-fit lg:mr-[60px] mx-[30px] lg:mx-0">
           <div className="w-fit z-[100] mt-[150px]">
-            <div
+            <button
               onClick={goToMembers}
               className={`${
                 currentLoc === 1 && "current-loc"
-              } bg-white rounded-[47px] w-[3px] h-[20px] cursor-pointer`}
-            ></div>
-            <div
+              } bg-white rounded-[47px] block w-[3px] h-[20px] cursor-pointer`}
+            />
+            <button
               onClick={goToQuestions}
               className={`${
                 currentLoc === 2 && "current-loc"
-              } mt-[6px] bg-white rounded-[47px] w-[3px] h-[20px] cursor-pointer`}
-            ></div>
-            <div
+              } mt-[6px] bg-white rounded-[47px] block w-[3px] h-[20px] cursor-pointer`}
+            />
+            <button
               onClick={goToFooter}
               className={`${
                 currentLoc === 3 && "current-loc"
-              } mt-[6px] bg-white rounded-[47px] w-[3px] h-[20px] cursor-pointer`}
-            ></div>
+              } mt-[6px] bg-white rounded-[47px] block w-[3px] h-[20px] cursor-pointer`}
+            />
           </div>
         </div>
 

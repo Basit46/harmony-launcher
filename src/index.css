@@ -32,9 +32,6 @@ body {
     @apply font-semibold text-[17px] leading-[145.3%] text-white;
   }
 
-  /* .menu ul {
-    @apply;
-  } */
   .menu ul a {
     @apply block text-[1.2rem] vsm:text-[2rem] mb-[40px] font-Russo hover:text-[#816dfd] hover:duration-300;
   }
@@ -149,10 +146,10 @@ body {
     transform: translateY(0%);
   }
 }
-.home button {
+.home .btn {
   background: linear-gradient(93.79deg, #6a52fb 3.11%, #9b8aff 96.17%);
 }
-.home button:hover {
+.home .btn:hover {
   background: linear-gradient(93.79deg, #6a52fb 3.11%, #6a52fb 96.17%);
 }
 .current-loc {

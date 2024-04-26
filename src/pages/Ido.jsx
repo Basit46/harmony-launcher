@@ -29,18 +29,18 @@ const Ido = () => {
     >
       <div className="h-full w-fit lg:mr-[60px] mx-[30px] lg:mx-0">
         <div className="w-fit z-[100] mt-[150px]">
-          <div
+          <button
             onClick={goToMain}
             className={`${
               currentLoc === 1 && "current-loc"
             } bg-white rounded-[47px] w-[3px] h-[20px] cursor-pointer`}
-          ></div>
-          <div
+          />
+          <button
             onClick={goToProjects}
             className={`${
               currentLoc === 2 && "current-loc"
             } mt-[6px] bg-white rounded-[47px] w-[3px] h-[20px] cursor-pointer`}
-          ></div>
+          />
         </div>
       </div>
 

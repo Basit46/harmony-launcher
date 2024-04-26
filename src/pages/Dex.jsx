@@ -96,7 +96,7 @@ const Dex = () => {
                   type="number"
                   placeholder="0.0"
                 />
-                <div
+                <button
                   onClick={showModal}
                   className="flex items-center bg-[#FFFFFF14] px-2.5 py-[5px] rounded-[100px]"
                 >
@@ -105,7 +105,7 @@ const Dex = () => {
                     ETH
                   </p>
                   <AiFillCaretDown />
-                </div>
+                </button>
               </div>
             </div>
 

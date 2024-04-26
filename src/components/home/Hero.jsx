@@ -33,7 +33,7 @@ const Hero = () => {
           The secure and hassle-free way to launch your projects on the Harmony
           Network.
         </p>
-        <button className="px-5 py-[15px] rounded-[30px] font-medium text-xl leading-6 text-white mt-[32px] mb-[20px] md:mb-0">
+        <button className="btn px-5 py-[15px] rounded-[30px] font-medium text-xl leading-6 text-white mt-[32px] mb-[20px] md:mb-0">
           Apple For IOD
         </button>
       </div>

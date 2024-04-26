@@ -1,16 +1,10 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Article = ({ article }) => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate(`/insights/${article.id}`);
-  };
-
   return (
-    <div
-      onClick={handleClick}
+    <Link
+      to={`/insights/${article.id}`}
       className="w-[356px] h-[459px] backdrop-blur-[5px] rounded-[20px] bg-[#111E37] p-[20px] cursor-pointer "
     >
       <img className="w-full" src={article.img} alt="article" />
@@ -21,7 +15,7 @@ const Article = ({ article }) => {
       <p className="font-medium text-[17px] leading-[126.7%] text-[rgba(255,255,255,0.4)]">
         {article.body.slice(0, 151)}
       </p>
-    </div>
+    </Link>
   );
 };
 
